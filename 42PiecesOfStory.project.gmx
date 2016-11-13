@@ -78,9 +78,11 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Walking.gml</script>
+    <script>scripts\EarnExp.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\TesteObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
