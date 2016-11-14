@@ -32,16 +32,24 @@ changeWepCooldownIni = 0;
 changeWepCooldownFin = 0;
 changeWepCooldown = 0.2;
 
+//dodge cooldown time variables
+dodgeCooldownIni = 0;
+dodgeCooldownFin = 0;
+dodgeCooldown = 0.5;
+
 //stances
 countStances = 0;
-stances[0] = "walk";
-stances[1] = "sword";
-stances[2] = "curvebow";
-stances[3] = "wand";
+//stances[0] = "walk";
+stances[0] = "sword";
+stances[1] = "curvebow";
+stances[2] = "wand";
 stance = stances[0]
 
 //player variables
+realPlayerDirection = "down";
 playerDirection = "down";
+pointerDirection = "down";
+pointerAng = 0;
 animationSpeed = 0.4;
 talentPoint = 1;
 playerLevel = 1;
@@ -73,23 +81,39 @@ expMax = 10
 
 //player´s movement
 
-var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
+//var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
 var time = get_timer()/1000000;
+var dodgeTime = get_timer()/1000000;
+pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
+
 if(keyboard_check(ord("S"))){    
-    script_execute(Walking,0,2,img,"down","normal");
+    
+    script_execute(Walking,0,2,"down","normal");
 }
 
 if(keyboard_check(ord("W"))){
-    script_execute(Walking,0,-2,img,"up","normal");
+    
+    script_execute(Walking,0,-2,"up","normal");
 }
 
 if(keyboard_check(ord("A"))){
-    script_execute(Walking,-2,0,img,"left","normal");
+    
+    script_execute(Walking,-2,0,"left","normal");
 }
 
 if(keyboard_check(ord("D"))){
-    script_execute(Walking,2,0,img,"right","normal");
+   
+    script_execute(Walking,2,0,"right","normal");
 }
+//dodge
+
+if(keyboard_check(ord("Q"))){
+if(dodgeTime &gt;= dodgeCooldownFin){
+    dodgeCooldownIni = dodgeTime;
+    dodgeCooldownFin = dodgeTime + dodgeCooldown;
+    script_execute(Dodge,obj_player,realPlayerDirection)
+
+}}
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
@@ -99,9 +123,9 @@ if(keyboard_check(ord("R"))){
         changeWepCooldownFin = time + changeWepCooldown; 
         stance = stances[countStances];
         countStances ++;
-        script_execute(EarnExp,40);
-        show_message("playerLevel: " + string(playerLevel) + 
-        " actualExp: " + string(actualExp) + " expMax " + string(expMax));
+        //script_execute(EarnExp,40);
+        //show_message("playerLevel: " + string(playerLevel) + 
+        //" actualExp: " + string(actualExp) + " expMax " + string(expMax));
         
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
         
@@ -111,6 +135,9 @@ if(keyboard_check(ord("R"))){
 //player idle depende de stance para stance
 if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp; (!keyboard_check(ord("A"))) &amp;&amp; (!keyboard_check(ord("D")))){ 
     
+    script_execute(ImageOrientation);
+    playerDirection =  pointerDirection;
+    realPlayerDirection = playerDirection;
     sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
 } 
 

@@ -79,10 +79,11 @@
   <scripts name="scripts">
     <script>scripts\Walking.gml</script>
     <script>scripts\EarnExp.gml</script>
+    <script>scripts\ImageOrientation.gml</script>
+    <script>scripts\Dodge.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\TesteObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
