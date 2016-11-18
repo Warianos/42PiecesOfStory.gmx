@@ -73,6 +73,11 @@
     <sprites name="Ammo_Effects">
       <sprite>sprites\Arrow</sprite>
     </sprites>
+    <sprites name="Enemies">
+      <sprites name="Wolf">
+        <sprite>sprites\spr_wolf</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -82,12 +87,23 @@
     <script>scripts\ImageOrientation.gml</script>
     <script>scripts\Dodge.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_debugger</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_enemy_wolf</object>
+    <object>objects\obj_debugger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
+  <constants number="3">
+    <constant name="enemy_hp_wolf">5</constant>
+    <constant name="enemy_speed_default">2</constant>
+    <constant name="player_hp_default">10</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

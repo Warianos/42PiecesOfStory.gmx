@@ -54,7 +54,8 @@ animationSpeed = 0.4;
 talentPoint = 1;
 playerLevel = 1;
 actualExp = 0;
-expMax = 10
+expMax = 10;
+hp = player_hp_default;
 </string>
           </argument>
         </arguments>
