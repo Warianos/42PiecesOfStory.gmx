@@ -77,6 +77,9 @@
       <sprites name="Wolf">
         <sprite>sprites\spr_wolf</sprite>
       </sprites>
+      <sprites name="Spider">
+        <sprite>sprites\spr_spider</sprite>
+      </sprites>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\spr_int_curvebow</sprite>
@@ -100,20 +103,31 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_enemy_wolf</object>
     <object>objects\obj_debugger</object>
+<<<<<<< HEAD
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
       <objects name="Dodge">
         <object>objects\obj_int_dodgeOn</object>
       </objects>
     </objects>
+=======
+    <objects name="enemies">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy_wolf</object>
+      <object>objects\obj_enemy_spider</object>
+    </objects>
+    <object>objects\obj_enemy_spawner</object>
+>>>>>>> origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="3">
+  <constants number="7">
+    <constant name="enemy_spider_y_inc">150</constant>
+    <constant name="enemy_spider_x_inc">200</constant>
+    <constant name="max_fps">30</constant>
+    <constant name="enemy_hp_spider">2</constant>
     <constant name="enemy_hp_wolf">5</constant>
     <constant name="enemy_speed_default">2</constant>
     <constant name="player_hp_default">10</constant>

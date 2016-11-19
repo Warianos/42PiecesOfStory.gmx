@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
+            <string>draw_set_color(c_black);
 draw_set_font(fnt_debugger);
 draw_text(32,32, "Player HP: " + string(obj_player.hp));
 </string>
