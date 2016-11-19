@@ -28,6 +28,7 @@
             <string>hp = enemy_hp_spider;
 
 state = enemy_state.chase;
+event_inherited();
 </string>
           </argument>
         </arguments>

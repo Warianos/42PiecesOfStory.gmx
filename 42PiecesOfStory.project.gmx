@@ -101,6 +101,7 @@
       <object>objects\obj_enemy_wolf</object>
       <object>objects\obj_enemy_spider</object>
     </objects>
+    <object>objects\obj_enemy_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
