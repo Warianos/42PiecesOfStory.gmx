@@ -104,21 +104,18 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_debugger</object>
-<<<<<<< HEAD
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
       <objects name="Dodge">
         <object>objects\obj_int_dodgeOn</object>
       </objects>
     </objects>
-=======
     <objects name="enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_wolf</object>
       <object>objects\obj_enemy_spider</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
->>>>>>> origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
