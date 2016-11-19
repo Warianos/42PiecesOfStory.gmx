@@ -35,7 +35,9 @@ changeWepCooldown = 0.2;
 //dodge cooldown time variables
 dodgeCooldownIni = 0;
 dodgeCooldownFin = 0;
-dodgeCooldown = 0.5;
+dodgeCooldown = 5;
+dodgeTime = 0;
+dodge = true;
 
 //stances
 countStances = 0;
@@ -84,7 +86,7 @@ hp = player_hp_default;
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
 var time = get_timer()/1000000;
-var dodgeTime = get_timer()/1000000;
+dodgeTime = get_timer()/1000000;
 pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
 
 if(keyboard_check(ord("S"))){    
@@ -108,13 +110,14 @@ if(keyboard_check(ord("D"))){
 }
 //dodge
 
-if(keyboard_check(ord("Q"))){
+if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 if(dodgeTime &gt;= dodgeCooldownFin){
     dodgeCooldownIni = dodgeTime;
     dodgeCooldownFin = dodgeTime + dodgeCooldown;
     script_execute(Dodge,obj_player,realPlayerDirection)
-
-}}
+    dodge = false;
+}
+}
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
@@ -124,10 +127,6 @@ if(keyboard_check(ord("R"))){
         changeWepCooldownFin = time + changeWepCooldown; 
         stance = stances[countStances];
         countStances ++;
-        //script_execute(EarnExp,40);
-        //show_message("playerLevel: " + string(playerLevel) + 
-        //" actualExp: " + string(actualExp) + " expMax " + string(expMax));
-        
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
         
 }
