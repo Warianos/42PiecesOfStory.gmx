@@ -139,11 +139,8 @@
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
-
     <object>objects\obj_warp_room01</object>
-
     <object>objects\obj_fireball</object>
->>>>>>> origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

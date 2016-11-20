@@ -160,7 +160,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
     if(dodgeTime &gt;= dodgeCooldownFin){
         dodgeCooldownIni = dodgeTime;
         dodgeCooldownFin = dodgeTime + dodgeCooldown;
-        script_execute(Dodge,obj_player,realPlayerDirection)
+        script_execute(Dodge,obj_player,realPlayerDirection,100)
         dodge = false;
     }
 }
