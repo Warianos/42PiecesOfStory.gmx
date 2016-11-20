@@ -127,21 +127,25 @@ pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y);
 if(keyboard_check(ord("S"))){    
     keyS = true;
     script_execute(Walking,0,2,"down","normal");
+    show_debug_message(realPlayerDirection);
 }else{keyS=false;}
 
 if(keyboard_check(ord("W"))){
     keyW = true;
     script_execute(Walking,0,-2,"up","normal");
+    show_debug_message(realPlayerDirection);
 }else{keyW=false;}
 
 if(keyboard_check(ord("A"))){
     keyA=true;
     script_execute(Walking,-2,0,"left","normal");
+    show_debug_message(realPlayerDirection);
 }else{keyA=false;}
 
 if(keyboard_check(ord("D"))){
    keyD=true;
     script_execute(Walking,2,0,"right","normal");
+    show_debug_message(realPlayerDirection);
 }else{keyD=false;}
 //dodge
 
@@ -149,7 +153,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 if(dodgeTime &gt;= dodgeCooldownFin){
     dodgeCooldownIni = dodgeTime;
     dodgeCooldownFin = dodgeTime + dodgeCooldown;
-    script_execute(Dodge,obj_player,realPlayerDirection)
+    script_execute(Dodge,obj_player,realPlayerDirection,100);
     dodge = false;
 }
 }
