@@ -98,6 +98,7 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
+    <sprite>sprites\sprite54</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -132,9 +133,11 @@
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
+    <object>objects\obj_warp_room01</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>

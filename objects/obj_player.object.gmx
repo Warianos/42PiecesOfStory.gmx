@@ -39,6 +39,13 @@ dodgeCooldown = 5;
 dodgeTime = 0;
 dodge = true;
 
+//attack cooldown time variables
+attackTime = 0;
+attackCooldownIni = 0;
+attackCooldownFin = 0;
+attackCooldown = 1;
+//attack = false;
+
 //stances
 countStances = 0;
 //stances[0] = "walk";
@@ -222,7 +229,7 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
             <kind>1</kind>
             <string>if(attacking){
     attacking = false;
-    obj_player.numbArrows = 0;
+    obj_player.numbArrows = 1;
 }
 </string>
           </argument>
