@@ -74,6 +74,8 @@ numbFireballs = 0;
 leftDiag = 0;
 rightDiag = 0;
 ability = false;
+swordHold = 0;
+holding = false;
 
 //check double keys
 keyW = false;
@@ -176,28 +178,14 @@ if(keyboard_check(ord("R"))){
     }
 }
 
-if(attacking &amp;&amp; !ability){
-    script_execute(Attack,stance,playerDirection);      
-}
-
-//trigger attack
-if (mouse_check_button_pressed(mb_left) &amp;&amp; !(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW)
-&amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
-    attacking = true;
-}
-
 //player idle depende de stance para stance
 if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp; (!keyboard_check(ord("A"))) &amp;&amp; (!keyboard_check(ord("D")))){ 
     
     script_execute(ImageOrientation);
     playerDirection =  pointerDirection;
     realPlayerDirection = playerDirection;
-    if(attacking &amp;&amp; !ability){        
-        script_execute(Attack,stance,playerDirection);
-    }    
-    else{
+    if(!attacking){
         sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
-
     }
 } 
 
@@ -206,6 +194,101 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>swordHold = 0;
+
+if(swordHold &lt; 10 &amp;&amp; attacking &amp;&amp; !ability){
+    script_execute(Attack,stance,playerDirection); 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW)
+&amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+    attacking = true;
+}
+
+if(attacking &amp;&amp; !ability &amp;&amp; swordHold &lt; 10){
+   script_execute(Attack,stance,playerDirection);  
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>swordHold++;
+
+if(swordHold &gt;= 30){
+    ability =true;
+    attacking =true;
+}
+
+if(ability){
+    with instance_create(x,y,obj_sword_hit){
+        image_xscale = obj_player.image_xscale;
+    }
+    obj_sword_hit.sprite_index = asset_get_index("spr_" + string(stance) + "_hit_" + string(playerDirection)); 
+    sprite_index = asset_get_index("spr_" + string(stance) + "_animation_" + string(playerDirection)); 
+    image_speed = 0.5;
+    swordHold = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -230,7 +313,6 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
             <kind>1</kind>
             <string>if(attacking){
     attacking = false;
-
     ability = false;
     numbArrows = 0;
     numbFireballs = 0;
@@ -259,11 +341,11 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
           <argument>
             <kind>1</kind>
             <string>if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
-    attacking = true;
     ability = true;
+    attacking = true;
 }
 
-if(attacking){
+if(ability){
     
     if(stance = "wand" &amp;&amp; obj_player.numbFireballs &lt; 1){
         script_execute(Ability,playerDirection);

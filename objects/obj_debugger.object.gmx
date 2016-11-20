@@ -31,7 +31,9 @@ draw_text(32,32, "Player HP: " + string(obj_player.hp));
 //draw_text(32,46, "Spider HP: " + string(obj_enemy_spider.hp));
 draw_text(32,60, "leftDiag: " + string(obj_player.leftDiag));
 draw_text(32,80, "rightDiag: " + string(obj_player.rightDiag));
-draw_text(32,100, "attacking: " + string(obj_player.attacking));
+draw_text(32,100, "hold: " + string(obj_player.swordHold));
+draw_text(32,120, "ability: " + string(obj_player.ability));
+draw_text(32,140, "attacking: " + string(obj_player.attacking));
 </string>
           </argument>
         </arguments>

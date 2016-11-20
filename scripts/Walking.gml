@@ -14,13 +14,18 @@ if(place_free(x+movSpeX,y+movSpeY)){
     
     if (playerDir != pointerDirection){
         playerDirection = pointerDirection;
-        sprite_index = asset_get_index("spr_walk_animation_" + string(playerDirection));
-        image_speed =  animationSpeed * -1; 
+        if(!attacking){
+            sprite_index = asset_get_index("spr_walk_animation_" + string(playerDirection));
+            image_speed =  animationSpeed * -1; 
+        }
     } 
     else {
         playerDirection = playerDir;
-        sprite_index = asset_get_index("spr_walk_animation_" + string(playerDirection));
-        image_speed =  animationSpeed; }
+        if(!attacking){
+            sprite_index = asset_get_index("spr_walk_animation_" + string(playerDirection));
+            image_speed =  animationSpeed; 
+        }
+    }
     
     
 }
