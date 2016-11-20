@@ -54,7 +54,6 @@ hspeed = 0;
             <kind>1</kind>
             <string>//triggered after the enemy has been hit, reseting his invincibility to false
 invincibility = false;
-
 </string>
           </argument>
         </arguments>

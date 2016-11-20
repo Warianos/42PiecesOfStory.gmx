@@ -10,16 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>enum enemy_state{
-    stop,
-    idle,
-    chase
-}
-enum stage_state{
-    spiders,
-    wolfs,
-    mixed
-}</code>
+  <code></code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -60,12 +51,9 @@ enum stage_state{
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_player" x="256" y="128" name="inst_7A424C77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_debugger" x="0" y="0" name="inst_297FE5EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_int_stances" x="320" y="64" name="inst_8D21E166" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_int_dodgeOn" x="224" y="64" name="inst_43360AF4" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemy_spawner" x="32" y="0" name="inst_EBD83B25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_warp_room01" x="896" y="288" name="inst_2A5CED58" locked="0" code="targetRoom = room1;&#xA;targetX = 160;&#xA;targetY = 200;&#xA;" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp_room01" x="96" y="224" name="inst_7A4D093C" locked="0" code="targetRoom = room0;&#xA;targetX = 800;&#xA;targetY = 256;&#xA;" scaleX="3.25" scaleY="3.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_int_stances" x="320" y="96" name="inst_37174C31" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_int_dodgeOn" x="224" y="96" name="inst_F0CC6B64" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
