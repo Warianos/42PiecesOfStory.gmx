@@ -77,10 +77,18 @@
       </sprites>
     </sprites>
     <sprites name="Ammo_Effects">
-      <sprite>sprites\Arrow_up</sprite>
-      <sprite>sprites\Arrow_down</sprite>
-      <sprite>sprites\Arrow_right</sprite>
-      <sprite>sprites\Arrow_left</sprite>
+      <sprites name="Arrows">
+        <sprite>sprites\Arrow_up</sprite>
+        <sprite>sprites\Arrow_down</sprite>
+        <sprite>sprites\Arrow_right</sprite>
+        <sprite>sprites\Arrow_left</sprite>
+      </sprites>
+      <sprites name="Magic">
+        <sprite>sprites\spr_fireball_left</sprite>
+        <sprite>sprites\spr_fireball_up</sprite>
+        <sprite>sprites\spr_fireball_down</sprite>
+        <sprite>sprites\spr_fireball_right</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Wolf">
@@ -99,6 +107,7 @@
       <sprite>sprites\spr_int_dodgeOff</sprite>
       <sprite>sprites\spr_int_dodgeOn</sprite>
     </sprites>
+    <sprite>sprites\spr_levelUp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -123,6 +132,7 @@
       <objects name="Dodge">
         <object>objects\obj_int_dodgeOn</object>
       </objects>
+      <object>objects\obj_levelUp</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
@@ -132,6 +142,7 @@
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
+    <object>objects\obj_fireball</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
