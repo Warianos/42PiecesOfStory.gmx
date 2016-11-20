@@ -63,6 +63,7 @@ attacking = false;
 
 //attacking
 numbArrows = 0;
+numbFireballs = 0;
 
 //check double keys
 keyW = false;
@@ -141,35 +142,34 @@ if(keyboard_check(ord("A"))){
 
 if(keyboard_check(ord("D"))){
    keyD=true;
-    script_execute(Walking,2,0,"right","normal");
+   script_execute(Walking,2,0,"right","normal");
 }else{keyD=false;}
-//dodge
 
+//dodge
 if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
-if(dodgeTime &gt;= dodgeCooldownFin){
-    dodgeCooldownIni = dodgeTime;
-    dodgeCooldownFin = dodgeTime + dodgeCooldown;
-    script_execute(Dodge,obj_player,realPlayerDirection)
-    dodge = false;
-}
+    if(dodgeTime &gt;= dodgeCooldownFin){
+        dodgeCooldownIni = dodgeTime;
+        dodgeCooldownFin = dodgeTime + dodgeCooldown;
+        script_execute(Dodge,obj_player,realPlayerDirection)
+        dodge = false;
+    }
 }
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
-    
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
         stance = stances[countStances];
         countStances ++;
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
-        
-}
+    }
 }
 
 if(attacking = true){
     script_execute(Attack,stance,playerDirection);      
 }
+
 //trigger attack
 if (mouse_check_button_pressed(mb_left) &amp;&amp; !(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW)
 &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
@@ -187,7 +187,8 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
     }else{
         sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
 
-    }} 
+    }
+} 
 
 
 
@@ -218,7 +219,8 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
             <kind>1</kind>
             <string>if(attacking){
     attacking = false;
-    obj_player.numbArrows = 0;
+    numbArrows = 0;
+    numbFireballs = 0;
 }
 </string>
           </argument>

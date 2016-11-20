@@ -29,7 +29,6 @@
 
 state = enemy_state.chase;
 event_inherited();
-invicibility=false;
 </string>
           </argument>
         </arguments>
