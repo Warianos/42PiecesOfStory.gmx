@@ -105,9 +105,12 @@
       <sprite>sprites\spr_int_dodgeOff</sprite>
       <sprite>sprites\spr_int_dodgeOn</sprite>
     </sprites>
+    <sprite>sprites\spr_levelUp</sprite>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\Walking.gml</script>
     <script>scripts\EarnExp.gml</script>
@@ -127,6 +130,7 @@
       <objects name="Dodge">
         <object>objects\obj_int_dodgeOn</object>
       </objects>
+      <object>objects\obj_levelUp</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
