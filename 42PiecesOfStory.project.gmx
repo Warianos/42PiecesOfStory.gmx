@@ -77,17 +77,22 @@
       </sprites>
     </sprites>
     <sprites name="Ammo_Effects">
-      <sprite>sprites\Arrow_up</sprite>
-      <sprite>sprites\Arrow_down</sprite>
-      <sprite>sprites\Arrow_right</sprite>
-      <sprite>sprites\Arrow_left</sprite>
+      <sprites name="Arrows">
+        <sprite>sprites\Arrow</sprite>
+        <sprite>sprites\Arrow_ability</sprite>
+      </sprites>
+      <sprites name="Magic">
+        <sprite>sprites\Fireball</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Wolf">
         <sprite>sprites\spr_wolf</sprite>
+        <sprite>sprites\spr_wolf_hit</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
+        <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
     </sprites>
     <sprites name="Interface">
@@ -111,6 +116,7 @@
     <script>scripts\Dodge.gml</script>
     <script>scripts\DrawInterface.gml</script>
     <script>scripts\Attack.gml</script>
+    <script>scripts\Ability.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -133,7 +139,11 @@
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
+
     <object>objects\obj_warp_room01</object>
+
+    <object>objects\obj_fireball</object>
+>>>>>>> origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

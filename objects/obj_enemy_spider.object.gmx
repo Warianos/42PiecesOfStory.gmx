@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = enemy_hp_spider;
-expe = 20
+
 state = enemy_state.chase;
 event_inherited();
 invincibility = false;
@@ -54,7 +54,7 @@ invincibility = false;
             <kind>1</kind>
             <string>//sets the invincibility to false after 30 frames after the enemy has been hit
 invincibility = false;
- 
+sprite_index = spr_spider;
 </string>
           </argument>
         </arguments>
@@ -82,10 +82,10 @@ invincibility = false;
 x+= irandom_range(-enemy_spider_x_inc, enemy_spider_x_inc);
 y+= irandom_range(-enemy_spider_y_inc, enemy_spider_y_inc);
 
-/*while(x &gt; room_width or x &lt; 0 or y &gt; room_height or y &lt; 0){
-    x+= random_range(-enemy_spider_x_inc, enemy_spider_x_inc);
-    y+= random_range(-enemy_spider_y_inc, enemy_spider_y_inc);
-}*/
+while(x &gt; room_width or x &lt; 0 or y &gt; room_height or y &lt; 0){
+    x+= irandom_range(-enemy_spider_x_inc, enemy_spider_x_inc);
+    y+= irandom_range(-enemy_spider_y_inc, enemy_spider_y_inc);
+}
 </string>
           </argument>
         </arguments>
