@@ -65,6 +65,8 @@ enum stage_state{
     <instance objName="obj_int_stances" x="320" y="64" name="inst_8D21E166" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_int_dodgeOn" x="224" y="64" name="inst_43360AF4" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_spawner" x="32" y="0" name="inst_EBD83B25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock" x="352" y="320" name="inst_481A8EE5" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_coin_count" x="416" y="64" name="inst_A44D16D7" locked="0" code="" scaleX="1.5" scaleY="1.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

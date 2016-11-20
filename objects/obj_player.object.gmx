@@ -60,6 +60,9 @@ expMax = 10;
 hp = player_hp_default;
 invincibility = false;
 attacking = false;
+hidden = false;
+coins = 0;
+coin_caught = false;
 
 //attacking
 numbArrows = 0;
@@ -189,11 +192,18 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
 
     }} 
 
-
-
-
-
-
+//Hide detection
+if(instance_exists(obj_enemy_wolf)){
+    if(place_meeting(x,y,obj_rock)){
+        obj_player.hidden=true;
+        obj_enemy_wolf.state=enemy_state.stop;
+       
+    }
+    else {
+        obj_player.hidden=false;
+        obj_enemy_wolf.state=enemy_state.chase;
+    }
+}
 </string>
           </argument>
         </arguments>
