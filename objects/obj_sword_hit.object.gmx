@@ -27,11 +27,12 @@
             <kind>1</kind>
             <string>if(invincibility != true){
     hp-= 1;
+    sprite_index = spr_spider_hit;
     if(hp &lt;= 0){
         instance_destroy();
     }
     invincibility = true;
-    alarm[2] = max_fps;  
+    alarm[2] = max_fps/2;  
 }
 </string>
           </argument>
@@ -57,11 +58,12 @@
             <kind>1</kind>
             <string>if(invincibility != true){
     hp-= 1;
+    sprite_index = spr_wolf_hit;
     if(hp &lt;= 0){
         instance_destroy();
     }
     invincibility = true;
-    alarm[1] = max_fps;  
+    alarm[1] = max_fps/2;  
 } 
 
 </string>

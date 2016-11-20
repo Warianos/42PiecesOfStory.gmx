@@ -85,9 +85,11 @@
     <sprites name="Enemies">
       <sprites name="Wolf">
         <sprite>sprites\spr_wolf</sprite>
+        <sprite>sprites\spr_wolf_hit</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
+        <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
     </sprites>
     <sprites name="Interface">

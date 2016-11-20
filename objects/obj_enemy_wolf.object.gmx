@@ -54,6 +54,7 @@ invincibility = false;
           <argument>
             <kind>1</kind>
             <string>invincibility = false;
+sprite_index = spr_wolf;
 </string>
           </argument>
         </arguments>
