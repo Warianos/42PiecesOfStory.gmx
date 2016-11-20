@@ -68,10 +68,19 @@
           <sprite>sprites\spr_curvebow_animation_down</sprite>
           <sprite>sprites\spr_curvebow_animation_right</sprite>
         </sprites>
+        <sprites name="Sword_Attack_Hit">
+          <sprite>sprites\spr_sword_hit_up</sprite>
+          <sprite>sprites\spr_sword_hit_left</sprite>
+          <sprite>sprites\spr_sword_hit_down</sprite>
+          <sprite>sprites\spr_sword_hit_right</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Ammo_Effects">
-      <sprite>sprites\Arrow</sprite>
+      <sprite>sprites\Arrow_up</sprite>
+      <sprite>sprites\Arrow_down</sprite>
+      <sprite>sprites\Arrow_right</sprite>
+      <sprite>sprites\Arrow_left</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Wolf">
@@ -97,6 +106,7 @@
     <script>scripts\ImageOrientation.gml</script>
     <script>scripts\Dodge.gml</script>
     <script>scripts\DrawInterface.gml</script>
+    <script>scripts\Attack.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -116,6 +126,8 @@
       <object>objects\obj_enemy_spider</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
+    <object>objects\obj_arrow</object>
+    <object>objects\obj_sword_hit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

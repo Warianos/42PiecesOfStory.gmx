@@ -59,6 +59,16 @@ actualExp = 0;
 expMax = 10;
 hp = player_hp_default;
 invincibility = false;
+attacking = false;
+
+//attacking
+numbArrows = 0;
+
+//check double keys
+keyW = false;
+keyA = false;
+keyS = false;
+keyD = false;
 </string>
           </argument>
         </arguments>
@@ -115,24 +125,24 @@ dodgeTime = get_timer()/1000000;
 pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
 
 if(keyboard_check(ord("S"))){    
-    
+    keyS = true;
     script_execute(Walking,0,2,"down","normal");
-}
+}else{keyS=false;}
 
 if(keyboard_check(ord("W"))){
-    
+    keyW = true;
     script_execute(Walking,0,-2,"up","normal");
-}
+}else{keyW=false;}
 
 if(keyboard_check(ord("A"))){
-    
+    keyA=true;
     script_execute(Walking,-2,0,"left","normal");
-}
+}else{keyA=false;}
 
 if(keyboard_check(ord("D"))){
-   
+   keyD=true;
     script_execute(Walking,2,0,"right","normal");
-}
+}else{keyD=false;}
 //dodge
 
 if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
@@ -157,20 +167,59 @@ if(keyboard_check(ord("R"))){
 }
 }
 
+if(attacking = true){
+    script_execute(Attack,stance,playerDirection);      
+}
+//trigger attack
+if (mouse_check_button_pressed(mb_left) &amp;&amp; !(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW)
+&amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+    attacking = true;
+}
+
 //player idle depende de stance para stance
 if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp; (!keyboard_check(ord("A"))) &amp;&amp; (!keyboard_check(ord("D")))){ 
     
     script_execute(ImageOrientation);
     playerDirection =  pointerDirection;
     realPlayerDirection = playerDirection;
-    sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
-} 
+    if(attacking = true){        
+        script_execute(Attack,stance,playerDirection);
+    }else{
+        sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
+
+    }} 
 
 
 
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(attacking){
+    attacking = false;
+    obj_player.numbArrows = 0;
+}
 </string>
           </argument>
         </arguments>

@@ -30,6 +30,7 @@
 state = enemy_state.idle;
 vspeed = 0;
 hspeed = 0;
+invicibility=false;
 </string>
           </argument>
         </arguments>
