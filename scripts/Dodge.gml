@@ -1,10 +1,11 @@
 
 objDodge = argument0;
 objDirection = argument1;
+pixeis = argument2;
 
-if (objDirection == "up"){objDodge.y -= 100;}
-if (objDirection == "down"){objDodge.y += 100;}
-if (objDirection == "left"){objDodge.x -= 100;}
-if (objDirection == "right"){objDodge.x += 100;}
+if (objDirection == "up"){objDodge.y -= pixeis;}
+if (objDirection == "down"){objDodge.y += pixeis;}
+if (objDirection == "left"){objDodge.x -= pixeis;}
+if (objDirection == "right"){objDodge.x += pixeis;}
 
 

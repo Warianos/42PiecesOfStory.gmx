@@ -39,6 +39,13 @@ dodgeCooldown = 5;
 dodgeTime = 0;
 dodge = true;
 
+//attack cooldown time variables
+attackTime = 0;
+attackCooldownIni = 0;
+attackCooldownFin = 0;
+attackCooldown = 1;
+//attack = false;
+
 //stances
 countStances = 0;
 //stances[0] = "walk";
@@ -66,6 +73,10 @@ coin_caught = false;
 
 //attacking
 numbArrows = 0;
+numbFireballs = 0;
+leftDiag = 0;
+rightDiag = 0;
+ability = false;
 
 //check double keys
 keyW = false;
@@ -144,35 +155,34 @@ if(keyboard_check(ord("A"))){
 
 if(keyboard_check(ord("D"))){
    keyD=true;
-    script_execute(Walking,2,0,"right","normal");
+   script_execute(Walking,2,0,"right","normal");
 }else{keyD=false;}
-//dodge
 
+//dodge
 if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
-if(dodgeTime &gt;= dodgeCooldownFin){
-    dodgeCooldownIni = dodgeTime;
-    dodgeCooldownFin = dodgeTime + dodgeCooldown;
-    script_execute(Dodge,obj_player,realPlayerDirection)
-    dodge = false;
-}
+    if(dodgeTime &gt;= dodgeCooldownFin){
+        dodgeCooldownIni = dodgeTime;
+        dodgeCooldownFin = dodgeTime + dodgeCooldown;
+        script_execute(Dodge,obj_player,realPlayerDirection,100)
+        dodge = false;
+    }
 }
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
-    
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
         stance = stances[countStances];
         countStances ++;
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
-        
-}
+    }
 }
 
-if(attacking = true){
+if(attacking &amp;&amp; !ability){
     script_execute(Attack,stance,playerDirection);      
 }
+
 //trigger attack
 if (mouse_check_button_pressed(mb_left) &amp;&amp; !(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW)
 &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
@@ -185,12 +195,14 @@ if((!keyboard_check(ord("W"))) &amp;&amp; (!keyboard_check(ord("S"))) &amp;&amp;
     script_execute(ImageOrientation);
     playerDirection =  pointerDirection;
     realPlayerDirection = playerDirection;
-    if(attacking = true){        
+    if(attacking &amp;&amp; !ability){        
         script_execute(Attack,stance,playerDirection);
-    }else{
+    }    
+    else{
         sprite_index = asset_get_index("spr_idle_" + string(stance) + "_" + string(playerDirection)); 
 
-    }} 
+    }
+} 
 
 //Hide detection
 if(instance_exists(obj_enemy_wolf)){
@@ -228,8 +240,100 @@ if(instance_exists(obj_enemy_wolf)){
             <kind>1</kind>
             <string>if(attacking){
     attacking = false;
-    obj_player.numbArrows = 0;
+
+    ability = false;
+    numbArrows = 0;
+    numbFireballs = 0;
+
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="69">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+    attacking = true;
+    ability = true;
+}
+
+if(attacking){
+    
+    if(stance = "wand" &amp;&amp; obj_player.numbFireballs &lt; 1){
+        script_execute(Ability,playerDirection);
+        i = instance_create(obj_player.x, obj_player.y, obj_fireball)
+        i.sprite_index = asset_get_index("Fireball");
+        i.speed = 4;
+        if(playerDirection = "up"){
+            i.direction = 90;
+            i.image_angle = 0;
+        }else if(playerDirection = "down"){
+            i.direction = 270;
+            i.image_angle = 180;
+        }else if(playerDirection = "right"){
+            i.direction = 0;
+            i.image_angle = 270;
+        }else if(playerDirection = "left"){
+            i.direction = 180;
+            i.image_angle = 90;
+        }
+        
+        i2 = instance_create(obj_player.x, obj_player.y, obj_fireball)
+        i2.sprite_index = asset_get_index("Fireball");
+        i2.speed = 4;
+        i2.image_angle = i.image_angle - 45;
+        i2.direction = obj_player.leftDiag;
+
+        i3 = instance_create(obj_player.x, obj_player.y, obj_fireball)
+        i3.sprite_index = asset_get_index("Fireball");
+        i3.speed = 4;
+        i3.image_angle = i.image_angle + 45;
+        i3.direction = obj_player.rightDiag;
+        
+        obj_player.numbFireballs +=1;
+    }  
+    
+    if(stance = "curvebow" &amp;&amp; obj_player.numbArrows &lt; 1){
+        i = instance_create(obj_player.x, obj_player.y, obj_arrow)
+        i.sprite_index = asset_get_index("Arrow_ability");
+        i.speed = 4;
+        if(playerDirection = "up"){
+            i.direction = 90;
+            i.image_angle = 0;
+        }else if(playerDirection = "down"){
+            i.direction = 270;
+            i.image_angle = 180;
+        }else if(playerDirection = "right"){
+            i.direction = 0;
+            i.image_angle = 270;
+        }else if(playerDirection = "left"){
+            i.direction = 180;
+            i.image_angle = 90;
+        }             
+        obj_player.numbArrows +=1;
+    } 
+    
+    sprite_index = asset_get_index("spr_" + string(stance) + "_animation_" + string(playerDirection)); 
+    image_speed = 0.5;
+}
+
+
 </string>
           </argument>
         </arguments>

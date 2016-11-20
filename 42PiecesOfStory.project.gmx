@@ -77,17 +77,22 @@
       </sprites>
     </sprites>
     <sprites name="Ammo_Effects">
-      <sprite>sprites\Arrow_up</sprite>
-      <sprite>sprites\Arrow_down</sprite>
-      <sprite>sprites\Arrow_right</sprite>
-      <sprite>sprites\Arrow_left</sprite>
+      <sprites name="Arrows">
+        <sprite>sprites\Arrow</sprite>
+        <sprite>sprites\Arrow_ability</sprite>
+      </sprites>
+      <sprites name="Magic">
+        <sprite>sprites\Fireball</sprite>
+      </sprites>
     </sprites>
     <sprites name="Enemies">
       <sprites name="Wolf">
         <sprite>sprites\spr_wolf</sprite>
+        <sprite>sprites\spr_wolf_hit</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
+        <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
     </sprites>
     <sprites name="Interface">
@@ -102,6 +107,8 @@
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
     </sprites>
+    <sprite>sprites\spr_levelUp</sprite>
+    <sprite>sprites\sprite54</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -114,6 +121,7 @@
     <script>scripts\Dodge.gml</script>
     <script>scripts\DrawInterface.gml</script>
     <script>scripts\Attack.gml</script>
+    <script>scripts\Ability.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -127,20 +135,24 @@
         <object>objects\obj_int_dodgeOn</object>
       </objects>
       <object>objects\obj_coin_count</object>
+      <object>objects\obj_levelUp</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
-      <object>objects\obj_enemy_wolf</object>
       <object>objects\obj_enemy_spider</object>
+      <object>objects\obj_enemy_wolf</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_rock</object>
     <object>objects\obj_arrow</object>
+    <object>objects\obj_warp_room01</object>
+    <object>objects\obj_fireball</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>
