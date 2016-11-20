@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_weapon</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="4" ename="obj_enemy">
@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp -= 1;
-if(hp &lt;= 0){
-    instance_destroy();
-    script_execute(EarnExp,10);
+            <string>if(invincibility != true){
+    hp-= 1;
+    if(hp &lt;= 0){
+        instance_destroy();
+        script_execute(EarnExp,10);
+    }
+    alarm[3] = 1;
+    invincibility = true;
+    alarm[2] = max_fps/2;  
 }
 </string>
           </argument>
