@@ -110,7 +110,16 @@
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\grass1</background>
+    <background>background\grass2</background>
+    <background>background\grass3</background>
+    <background>background\beach0</background>
+    <background>background\beach1</background>
+    <background>background\beach2</background>
+    <background>background\stones</background>
+    <background>background\sand</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
   </paths>
