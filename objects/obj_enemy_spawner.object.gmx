@@ -63,7 +63,7 @@
         
         case stage_state.wolfs:
         {
-            for(i = 0; i &lt; 3; i++)
+            for(i = 0; i &lt; 1; i++)
                 instance_create(random(room_width), random(room_height), obj_enemy_wolf);
             stage = stage_state.mixed;
         }

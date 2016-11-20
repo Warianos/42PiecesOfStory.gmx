@@ -99,7 +99,9 @@
     </sprites>
   </sprites>
   <backgrounds name="background"/>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\Walking.gml</script>
     <script>scripts\EarnExp.gml</script>

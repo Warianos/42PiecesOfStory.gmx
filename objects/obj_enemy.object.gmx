@@ -27,10 +27,11 @@
             <kind>1</kind>
             <string>//calculate random position to spawn the enemy, and check if it is not 
 //spawning too close to the player
-while(distance_to_object(obj_player) &lt; 50){
-    x = random(room_width);
-    y = random(room_height);
+while(distance_to_object(obj_player) &lt; 10){
+    x = irandom(room_width);
+    y = irandom(room_height);
 }
+
 </string>
           </argument>
         </arguments>

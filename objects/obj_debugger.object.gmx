@@ -28,7 +28,6 @@
             <string>draw_set_color(c_black);
 draw_set_font(fnt_debugger);
 draw_text(32,32, "Player HP: " + string(obj_player.hp));
-draw_text(32,46, "Spider HP: " + string(obj_enemy_spider.hp));
 </string>
           </argument>
         </arguments>

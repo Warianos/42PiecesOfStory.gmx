@@ -29,7 +29,32 @@
 
 state = enemy_state.chase;
 event_inherited();
-invicibility=false;
+invincibility = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//sets the invincibility to false after 30 frames after the enemy has been hit
+invincibility = false;
+ 
 </string>
           </argument>
         </arguments>
@@ -54,13 +79,13 @@ invicibility=false;
             <kind>1</kind>
             <string>//spider can jump to any position in the square centered on its position, with 200
 // width and 150 height
-x+= random_range(-enemy_spider_x_inc, enemy_spider_x_inc);
-y+= random_range(-enemy_spider_y_inc, enemy_spider_y_inc);
+x+= irandom_range(-enemy_spider_x_inc, enemy_spider_x_inc);
+y+= irandom_range(-enemy_spider_y_inc, enemy_spider_y_inc);
 
-while(x &gt; room_width or x &lt; 0 or y &gt; room_height or y &lt; 0){
+/*while(x &gt; room_width or x &lt; 0 or y &gt; room_height or y &lt; 0){
     x+= random_range(-enemy_spider_x_inc, enemy_spider_x_inc);
     y+= random_range(-enemy_spider_y_inc, enemy_spider_y_inc);
-}
+}*/
 </string>
           </argument>
         </arguments>
