@@ -79,8 +79,8 @@ sprite_index = spr_spider;
             <kind>1</kind>
             <string>//spider can jump to any position in the square centered on its position, with 200
 // width and 150 height
-x+= random_range(-enemy_spider_x_inc, enemy_spider_x_inc);
-y+= random_range(-enemy_spider_y_inc, enemy_spider_y_inc);
+x+= irandom_range(-enemy_spider_x_inc, enemy_spider_x_inc);
+y+= irandom_range(-enemy_spider_y_inc, enemy_spider_y_inc);
 
 while(x &gt; room_width or x &lt; 0 or y &gt; room_height or y &lt; 0){
     x+= irandom_range(-enemy_spider_x_inc, enemy_spider_x_inc);
