@@ -276,15 +276,15 @@ if(attacking){
         }
         
         i2 = instance_create(obj_player.x, obj_player.y, obj_fireball)
-        i2.sprite_index = asset_get_index("spr_fireball_" + string(playerDirection));
+        i2.sprite_index = asset_get_index("Fireball");
         i2.speed = 4;
-        i2.image_angle = 305;
+        i2.image_angle = i.image_angle - 45;
         i2.direction = obj_player.leftDiag;
 
         i3 = instance_create(obj_player.x, obj_player.y, obj_fireball)
-        i3.sprite_index = asset_get_index("spr_fireball_" + string(playerDirection));
+        i3.sprite_index = asset_get_index("Fireball");
         i3.speed = 4;
-        i3.image_angle = 45;
+        i3.image_angle = i.image_angle + 45;
         i3.direction = obj_player.rightDiag;
         
         obj_player.numbFireballs +=1;
@@ -312,7 +312,6 @@ if(attacking){
     
     sprite_index = asset_get_index("spr_" + string(stance) + "_animation_" + string(playerDirection)); 
     image_speed = 0.5;
-
 }
 
 

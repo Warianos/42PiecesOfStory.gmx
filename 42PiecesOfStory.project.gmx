@@ -132,13 +132,13 @@
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
-      <object>objects\obj_enemy_wolf</object>
       <object>objects\obj_enemy_spider</object>
+      <object>objects\obj_enemy_wolf</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_arrow</object>
-    <object>objects\obj_sword_hit</object>
     <object>objects\obj_fireball</object>
+    <object>objects\obj_sword_hit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
