@@ -1,10 +1,13 @@
 stance = argument0;
 playerDirection = argument1;
 
+if(attackTime >= attackCooldownFin){
+        attackCooldownIni = attackTime;
+        attackCooldownFin = attackTime + attackCooldown;
 if(stance = "curvebow" && obj_player.numbArrows < 1){
     i = instance_create(obj_player.x, obj_player.y, obj_arrow)
     i.sprite_index = asset_get_index("Arrow");
-    i.speed = 4;
+    i.speed = obj_player.arrowVel;
     if(playerDirection = "up"){
         i.direction = 90;
         i.image_angle=0;
@@ -24,7 +27,7 @@ if(stance = "curvebow" && obj_player.numbArrows < 1){
 if(stance = "wand" && obj_player.numbFireballs < 1){
     i = instance_create(obj_player.x, obj_player.y, obj_fireball)
     i.sprite_index = asset_get_index("Fireball");
-    i.speed = 4;
+    i.speed = obj_player.fireballVel;
     if(playerDirection = "up"){
         i.direction = 90;
         i.image_angle=0;
@@ -47,7 +50,7 @@ if(stance = "sword"){
     }
     obj_sword_hit.sprite_index = asset_get_index("spr_" + string(stance) + "_hit_" + string(playerDirection)); 
 }
-
+}
 sprite_index = asset_get_index("spr_" + string(stance) + "_animation_" + string(playerDirection)); 
 image_speed = 0.5;
 

@@ -39,12 +39,18 @@ dodgeCooldown = 5;
 dodgeTime = 0;
 dodge = true;
 
+//special attack cooldown time variables
+specialAttackTime = 0;
+specialAttackCooldownIni = 0;
+specialAttackCooldownFin = 0;
+specialAttackCooldown = 1;
+//attack = false;
+
 //attack cooldown time variables
 attackTime = 0;
 attackCooldownIni = 0;
 attackCooldownFin = 0;
-attackCooldown = 1;
-//attack = false;
+attackCooldown = 0.5;
 
 //stances
 countStances = 0;
@@ -59,6 +65,9 @@ realPlayerDirection = "down";
 playerDirection = "down";
 pointerDirection = "down";
 pointerAng = 0;
+pixelToMove = 4; 
+fireballVel = 10;
+arrowVel = 10;
 animationSpeed = 0.4;
 talentPoint = 1;
 playerLevel = 1;
@@ -138,26 +147,29 @@ invincibility = false;
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
 var time = get_timer()/1000000;
 dodgeTime = get_timer()/1000000;
+attackTime = get_timer()/1000000;
+specialAttackTime = get_timer()/1000000;
+
 pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
 
 if(keyboard_check(ord("S"))){    
     keyS = true;
-    script_execute(Walking,0,2,"down","normal");
+    script_execute(Walking,0,pixelToMove,"down","normal");
 }else{keyS=false;}
 
 if(keyboard_check(ord("W"))){
     keyW = true;
-    script_execute(Walking,0,-2,"up","normal");
+    script_execute(Walking,0,-pixelToMove,"up","normal");
 }else{keyW=false;}
 
 if(keyboard_check(ord("A"))){
     keyA=true;
-    script_execute(Walking,-2,0,"left","normal");
+    script_execute(Walking,-pixelToMove,0,"left","normal");
 }else{keyA=false;}
 
 if(keyboard_check(ord("D"))){
    keyD=true;
-   script_execute(Walking,2,0,"right","normal");
+   script_execute(Walking,pixelToMove,0,"right","normal");
 }else{keyD=false;}
 
 //dodge
@@ -322,7 +334,11 @@ if(ability){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+            <string>if(specialAttackTime &gt;= specialAttackCooldownFin){
+        specialAttackCooldownIni = specialAttackTime;
+        specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
+
+if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
     ability = true;
     attacking = true;
 }
@@ -333,7 +349,7 @@ if(ability){
         script_execute(Ability,playerDirection);
         i = instance_create(obj_player.x, obj_player.y, obj_fireball)
         i.sprite_index = asset_get_index("Fireball");
-        i.speed = 4;
+        i.speed = fireballVel;
         if(playerDirection = "up"){
             i.direction = 90;
             i.image_angle = 0;
@@ -350,13 +366,13 @@ if(ability){
         
         i2 = instance_create(obj_player.x, obj_player.y, obj_fireball)
         i2.sprite_index = asset_get_index("Fireball");
-        i2.speed = 4;
+        i2.speed = fireballVel;
         i2.image_angle = i.image_angle - 45;
         i2.direction = obj_player.leftDiag;
 
         i3 = instance_create(obj_player.x, obj_player.y, obj_fireball)
         i3.sprite_index = asset_get_index("Fireball");
-        i3.speed = 4;
+        i3.speed = fireballVel;
         i3.image_angle = i.image_angle + 45;
         i3.direction = obj_player.rightDiag;
         
@@ -366,7 +382,7 @@ if(ability){
     if(stance = "curvebow" &amp;&amp; obj_player.numbArrows &lt; 1){
         i = instance_create(obj_player.x, obj_player.y, obj_arrow)
         i.sprite_index = asset_get_index("Arrow_ability");
-        i.speed = 4;
+        i.speed = arrowVel;
         if(playerDirection = "up"){
             i.direction = 90;
             i.image_angle = 0;
@@ -389,7 +405,7 @@ if(ability){
     }
 }
 
-
+}
 </string>
           </argument>
         </arguments>
@@ -412,9 +428,10 @@ if(ability){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(obj_enemy))
+            <string>/*if(instance_exists(obj_enemy))
     with(obj_enemy)
         instance_destroy();
+*/
 </string>
           </argument>
         </arguments>
