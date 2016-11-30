@@ -119,6 +119,9 @@
     <background>background\beach2</background>
     <background>background\stones</background>
     <background>background\sand</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
+    <background>background\background10</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -163,6 +166,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>
