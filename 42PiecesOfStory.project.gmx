@@ -103,6 +103,9 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
+      <sprite>sprites\spr_healthbar</sprite>
+      <sprite>sprites\spr_healthbar_full</sprite>
+      <sprite>sprites\spr_healthbar_zero</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
@@ -148,6 +151,7 @@
       </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
+      <object>objects\obj_healthbar</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
