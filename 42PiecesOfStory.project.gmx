@@ -103,15 +103,16 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
-      <sprite>sprites\spr_healthbar</sprite>
+      <sprite>sprites\spr_stats</sprite>
+      <sprite>sprites\spr_dodgebar_full</sprite>
       <sprite>sprites\spr_healthbar_full</sprite>
-      <sprite>sprites\spr_healthbar_zero</sprite>
+      <sprite>sprites\spr_bar_zero</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
-    <sprite>sprites\sprite54</sprite>
+    <sprite>sprites\spr_warp</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -146,12 +147,9 @@
     <object>objects\obj_debugger</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
-      <objects name="Dodge">
-        <object>objects\obj_int_dodgeOn</object>
-      </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
-      <object>objects\obj_healthbar</object>
+      <object>objects\obj_player_stats</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>

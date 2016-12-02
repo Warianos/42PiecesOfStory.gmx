@@ -20,6 +20,6 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\sprite54_0.png</frame>
+    <frame index="0">images\spr_warp_0.png</frame>
   </frames>
 </sprite>

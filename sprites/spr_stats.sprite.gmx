@@ -20,6 +20,6 @@
   <width>396</width>
   <height>174</height>
   <frames>
-    <frame index="0">images\spr_healthbar_0.png</frame>
+    <frame index="0">images\spr_stats_0.png</frame>
   </frames>
 </sprite>

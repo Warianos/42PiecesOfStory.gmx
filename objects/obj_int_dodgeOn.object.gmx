@@ -94,24 +94,23 @@ if(tempoOff &lt;=0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>//draw_self();
 
 if(showtext == true){
    show_debug_message(tempoOff);
    if((round(tempoOff)&gt;=0) &amp;&amp; (round(tempoOff)&lt;1)){
-       draw_set_color(c_red);
-       draw_text_transformed(x-5,y-20,1,2.5,2.5,image_angle);
-       
-       
+       //draw_set_color(c_red);
+       //draw_text_transformed(x-5,y-20,1,2.5,2.5,image_angle);
     }
     else{
-    draw_set_color(c_red);
-    draw_text_transformed(x-5,y-20,round(tempoOff),2.5,2.5,image_angle);}
+        //draw_set_color(c_red);
+        //draw_text_transformed(x-5,y-20,round(tempoOff),2.5,2.5,image_angle);
+    }
     
 }
 
-draw_set_color(c_white);
-draw_text_transformed(x+20 ,y+10,"Q",3.5,3.5,image_angle);
+//draw_set_color(c_white);
+//draw_text_transformed(x+20 ,y+10,"Q",3.5,3.5,image_angle);
 </string>
           </argument>
         </arguments>
