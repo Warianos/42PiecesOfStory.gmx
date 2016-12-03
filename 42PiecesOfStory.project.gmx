@@ -109,6 +109,8 @@
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
+    <sprite>sprites\spr_target</sprite>
+    <sprite>sprites\spr_collision</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -122,6 +124,7 @@
     <background>background\background8</background>
     <background>background\background9</background>
     <background>background\background10</background>
+    <background>background\background11</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -156,17 +159,23 @@
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_rock</object>
+    <object>objects\obj_target</object>
     <object>objects\obj_warp_room01</object>
     <object>objects\obj_weapon</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
+    <object>objects\obj_collision</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
-    <room>rooms\room2</room>
+    <room>rooms\room_5</room>
+    <room>rooms\room_2</room>
+    <room>rooms\room_3</room>
+    <room>rooms\room_4</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>
