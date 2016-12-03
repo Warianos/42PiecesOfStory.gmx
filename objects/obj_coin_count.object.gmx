@@ -78,7 +78,7 @@ if (playerObj.coin_caught == true) {
     playerObj.coin_caught=false;
 }
 
-draw_text(x,y+40,playerObj.coins);
+draw_text(x,y+20,playerObj.coins);
 </string>
           </argument>
         </arguments>

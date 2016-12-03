@@ -110,7 +110,7 @@ if(showtext == true){
     
 }
 
-draw_set_color(c_white);
+draw_set_color(c_black);
 draw_text_transformed(x+20 ,y+10,"Q",3.5,3.5,image_angle);
 </string>
           </argument>

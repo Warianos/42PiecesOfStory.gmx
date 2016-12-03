@@ -95,7 +95,6 @@
         <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_healthbar_zero</sprite>
     <sprites name="Interface">
       <sprite>sprites\spr_int_curvebow</sprite>
       <sprite>sprites\spr_int_sword</sprite>
@@ -104,13 +103,9 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
-      <sprite>sprites\spr_healthbar_full</sprite>
-      <sprite>sprites\spr_healthbar</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
-      <sprite>sprites\spr_target</sprite>
-      <sprite>sprites\spr_collision</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
@@ -124,9 +119,9 @@
     <background>background\beach2</background>
     <background>background\stones</background>
     <background>background\sand</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
     <background>background\background10</background>
-    <background>background\background11</background>
-    <background>background\background12</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -144,11 +139,6 @@
     <font>fonts\fnt_debugger</font>
   </fonts>
   <objects name="objects">
-    <objects name="Neutral">
-      <object>objects\obj_rock</object>
-      <object>objects\obj_target</object>
-      <object>objects\obj_collision</object>
-    </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_debugger</object>
     <objects name="Interface">
@@ -158,7 +148,6 @@
       </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
-      <object>objects\obj_healthbar</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
@@ -166,22 +155,18 @@
       <object>objects\obj_enemy_wolf</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
+    <object>objects\obj_rock</object>
     <object>objects\obj_warp_room01</object>
     <object>objects\obj_weapon</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
-    <object>objects\object18</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>
-    <room>rooms\room_1</room>
-    <room>rooms\room_2</room>
-    <room>rooms\room_3</room>
-    <room>rooms\room_4</room>
-    <room>rooms\room_5</room>
+    <room>rooms\room2</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>

@@ -55,7 +55,7 @@
     switch(stage){
         case stage_state.spiders:
         {
-            for(i = 0; i &lt; 3; i++)
+            for(i = 0; i &lt; 5; i++)
                 instance_create(random(room_width), random(room_height), obj_enemy_spider);
             stage = stage_state.wolfs;
         }
@@ -63,7 +63,7 @@
         
         case stage_state.wolfs:
         {
-            for(i = 0; i &lt; 5; i++)
+            for(i = 0; i &lt; 8; i++)
                 instance_create(random(room_width), random(room_height), obj_enemy_wolf);
             stage = stage_state.mixed;
         }
@@ -71,7 +71,7 @@
         
         case stage_state.mixed:
         {
-            for(i = 0; i &lt; 6; i++){
+            for(i = 0; i &lt; 10; i++){
                 instance_create(random(room_width), random(room_height), obj_enemy_wolf);
                 instance_create(random(room_width), random(room_height), obj_enemy_spider);
             }
