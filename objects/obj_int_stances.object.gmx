@@ -52,10 +52,10 @@ sprite_index = asset_get_index("spr_int_" + string(obj_player.stance));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_self();
+            <string>draw_self();
 
-//draw_set_color(c_white);
-//draw_text_transformed(x+20 ,y+10,"R",3.5,3.5,image_angle);
+draw_set_color(c_white);
+draw_text_transformed(x+20 ,y+10,"R",3.5,3.5,image_angle);
 </string>
           </argument>
         </arguments>

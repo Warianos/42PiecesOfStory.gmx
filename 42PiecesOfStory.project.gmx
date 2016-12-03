@@ -95,6 +95,7 @@
         <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_healthbar_zero</sprite>
     <sprites name="Interface">
       <sprite>sprites\spr_int_curvebow</sprite>
       <sprite>sprites\spr_int_sword</sprite>
@@ -103,16 +104,16 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
-      <sprite>sprites\spr_healthbar</sprite>
       <sprite>sprites\spr_healthbar_full</sprite>
-      <sprite>sprites\spr_healthbar_zero</sprite>
+      <sprite>sprites\spr_healthbar</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
+      <sprite>sprites\spr_target</sprite>
+      <sprite>sprites\spr_collision</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
-    <sprite>sprites\spr_target</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -143,6 +144,11 @@
     <font>fonts\fnt_debugger</font>
   </fonts>
   <objects name="objects">
+    <objects name="Neutral">
+      <object>objects\obj_rock</object>
+      <object>objects\obj_target</object>
+      <object>objects\obj_collision</object>
+    </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_debugger</object>
     <objects name="Interface">
@@ -160,7 +166,6 @@
       <object>objects\obj_enemy_wolf</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
-    <object>objects\obj_rock</object>
     <object>objects\obj_warp_room01</object>
     <object>objects\obj_weapon</object>
     <object>objects\obj_fireball</object>
@@ -168,7 +173,6 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
     <object>objects\object18</object>
-    <object>objects\obj_target</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

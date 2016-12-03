@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_warp_room01" x="96" y="224" name="inst_7A4D093C" locked="0" code="targetRoom = room0;&#xA;targetX = 800;&#xA;targetY = 256;&#xA;" scaleX="3.25" scaleY="3.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_int_stances" x="320" y="64" name="inst_37174C31" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_int_dodgeOn" x="224" y="64" name="inst_F0CC6B64" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
