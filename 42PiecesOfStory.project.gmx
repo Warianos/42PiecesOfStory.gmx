@@ -103,16 +103,16 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
-      <sprite>sprites\spr_stats</sprite>
-      <sprite>sprites\spr_dodgebar_full</sprite>
+      <sprite>sprites\spr_healthbar</sprite>
       <sprite>sprites\spr_healthbar_full</sprite>
-      <sprite>sprites\spr_bar_zero</sprite>
+      <sprite>sprites\spr_healthbar_zero</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
-    <sprite>sprites\spr_warp</sprite>
+    <sprite>sprites\sprite54</sprite>
+    <sprite>sprites\spr_target</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -123,9 +123,9 @@
     <background>background\beach2</background>
     <background>background\stones</background>
     <background>background\sand</background>
-    <background>background\background8</background>
-    <background>background\background9</background>
     <background>background\background10</background>
+    <background>background\background11</background>
+    <background>background\background12</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -147,9 +147,12 @@
     <object>objects\obj_debugger</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
+      <objects name="Dodge">
+        <object>objects\obj_int_dodgeOn</object>
+      </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
-      <object>objects\obj_player_stats</object>
+      <object>objects\obj_healthbar</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
@@ -164,11 +167,17 @@
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
+    <object>objects\object18</object>
+    <object>objects\obj_target</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>
-    <room>rooms\room2</room>
+    <room>rooms\room_1</room>
+    <room>rooms\room_2</room>
+    <room>rooms\room_3</room>
+    <room>rooms\room_4</room>
+    <room>rooms\room_5</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>
