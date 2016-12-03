@@ -94,6 +94,29 @@
         <sprite>sprites\spr_spider</sprite>
         <sprite>sprites\spr_spider_hit</sprite>
       </sprites>
+      <sprites name="Goblin">
+        <sprites name="Walk_Animation">
+          <sprite>sprites\spr_goblin_walk_animation_up</sprite>
+          <sprite>sprites\spr_goblin_walk_animation_left</sprite>
+          <sprite>sprites\spr_goblin_walk_animation_down</sprite>
+          <sprite>sprites\spr_goblin_walk_animation_right</sprite>
+        </sprites>
+        <sprites name="Idle">
+          <sprite>sprites\spr_goblin_idle_up</sprite>
+          <sprite>sprites\spr_goblin_idle_left</sprite>
+          <sprite>sprites\spr_goblin_idle_down</sprite>
+          <sprite>sprites\spr_goblin_idle_right</sprite>
+        </sprites>
+        <sprites name="Die">
+          <sprite>sprites\spr_goblin_die</sprite>
+        </sprites>
+        <sprites name="Weapon_Animation">
+          <sprite>sprites\spr_goblin_sword_animation_up</sprite>
+          <sprite>sprites\spr_goblin_sword_animation_left</sprite>
+          <sprite>sprites\spr_goblin_sword_animation_down</sprite>
+          <sprite>sprites\spr_goblin_sword_animation_right</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\spr_int_curvebow</sprite>
@@ -138,12 +161,13 @@
     <script>scripts\EarnExp.gml</script>
     <script>scripts\ImageOrientation.gml</script>
     <script>scripts\Dodge.gml</script>
-    <script>scripts\DrawInterface.gml</script>
+    <script>scripts\DrawText.gml</script>
     <script>scripts\Attack.gml</script>
     <script>scripts\Ability.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
+    <font>fonts\fnt_text</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -153,11 +177,13 @@
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
       <object>objects\obj_stats</object>
+      <object>objects\obj_text</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_spider</object>
       <object>objects\obj_enemy_wolf</object>
+      <object>objects\obj_enemy_goblin</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_rock</object>
