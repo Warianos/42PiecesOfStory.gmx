@@ -54,11 +54,12 @@ attackCooldown = 0.5;
 
 //stances
 countStances = 0;
-//stances[0] = "walk";
 stances[0] = "sword";
 stances[1] = "curvebow";
 stances[2] = "wand";
 stance = stances[0]
+canUseBow = false;
+canUseStaff = false;
 
 //player variables
 realPlayerDirection = "down";
@@ -88,6 +89,7 @@ rightDiag = 0;
 ability = false;
 swordHold = 0;
 holding = false;
+canUseAbility = false;
 
 //check double keys
 keyW = false;
@@ -187,8 +189,17 @@ if(keyboard_check(ord("R"))){
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
-        stance = stances[countStances];
         countStances ++;
+        stance = stances[countStances];
+        if(stance == "curvebow" &amp;&amp; !canUseBow){
+            countStances--;
+            stance = stances[countStances]
+        }else if(stance == "wand" &amp;&amp; !canUseStaff){
+            countStances = 0;
+            stance = stances[countStances]
+        }
+        show_debug_message(countStances);
+        
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
     }
 }
@@ -269,7 +280,7 @@ swordHold = 0;
             <kind>1</kind>
             <string>swordHold++;
 
-if(swordHold &gt;= 30 &amp;&amp; stance ==  "sword"){
+if(swordHold &gt;= 30 &amp;&amp; stance ==  "sword" &amp;&amp; canUseAbility){
     ability =true;
     attacking =true;
 }
@@ -338,7 +349,7 @@ if(ability){
         specialAttackCooldownIni = specialAttackTime;
         specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
 
-if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW &amp;&amp; canUseAbility)){
     ability = true;
     attacking = true;
 }

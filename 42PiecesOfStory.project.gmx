@@ -99,10 +99,12 @@
       <sprite>sprites\spr_int_curvebow</sprite>
       <sprite>sprites\spr_int_sword</sprite>
       <sprite>sprites\spr_int_wand</sprite>
-      <sprite>sprites\spr_int_dodgeOff</sprite>
-      <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
+      <sprite>sprites\spr_stats</sprite>
+      <sprite>sprites\spr_healthbar_full</sprite>
+      <sprite>sprites\spr_dodge_full</sprite>
+      <sprite>sprites\spr_bar_default</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
@@ -111,6 +113,7 @@
     <sprite>sprites\sprite54</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\spr_collision</sprite>
+    <sprite>sprites\spr_warp_empty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -147,11 +150,9 @@
     <object>objects\obj_debugger</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
-      <objects name="Dodge">
-        <object>objects\obj_int_dodgeOn</object>
-      </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
+      <object>objects\obj_stats</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>

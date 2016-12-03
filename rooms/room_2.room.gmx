@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_target" x="224" y="0" name="inst_997C312C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp_room01" x="32" y="384" name="inst_F651542F" locked="0" code="targetRoom = room_1;&#xA;targetX = 410;&#xA;targetY = 350;&#xA;areaUnlocked = true;&#xA;" scaleX="1.5" scaleY="2.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background10" x="0" y="416" w="32" h="32" xo="832" yo="96" id="10001380" name="inst_F75CC17E" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
