@@ -180,11 +180,7 @@ script_execute(getTimeline,Cutscene_Ch1_Beginning,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
