@@ -122,8 +122,6 @@
       <sprite>sprites\spr_int_curvebow</sprite>
       <sprite>sprites\spr_int_sword</sprite>
       <sprite>sprites\spr_int_wand</sprite>
-      <sprite>sprites\spr_int_dodgeOff</sprite>
-      <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
       <sprite>sprites\spr_cutScene_Screen</sprite>
@@ -175,9 +173,6 @@
     <object>objects\obj_debugger</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
-      <objects name="Dodge">
-        <object>objects\obj_int_dodgeOn</object>
-      </objects>
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
       <object>objects\obj_text</object>
