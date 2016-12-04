@@ -79,6 +79,7 @@
     <sprites name="Ammo_Effects">
       <sprites name="Arrows">
         <sprite>sprites\Arrow</sprite>
+        <sprite>sprites\Arrow_enemy</sprite>
         <sprite>sprites\Arrow_ability</sprite>
       </sprites>
       <sprites name="Magic">
@@ -93,6 +94,24 @@
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
         <sprite>sprites\spr_spider_hit</sprite>
+      </sprites>
+      <sprites name="Skeleton_Warrior">
+        <sprite>sprites\spr_skel_war_left</sprite>
+        <sprite>sprites\spr_skel_war_left_hit</sprite>
+        <sprite>sprites\spr_skel_war_right</sprite>
+        <sprite>sprites\spr_skel_war_right_hit</sprite>
+        <sprite>sprites\spr_skel_war_left_attack</sprite>
+        <sprite>sprites\spr_skel_war_right_attack</sprite>
+      </sprites>
+      <sprites name="Bat">
+        <sprite>sprites\spr_bat_right</sprite>
+        <sprite>sprites\spr_bat_right_hit</sprite>
+        <sprite>sprites\spr_bat_left</sprite>
+        <sprite>sprites\spr_bat_left_hit</sprite>
+        <sprite>sprites\spr_bat_down</sprite>
+        <sprite>sprites\spr_bat_down_hit</sprite>
+        <sprite>sprites\spr_bat_up</sprite>
+        <sprite>sprites\spr_bat_up_hit</sprite>
       </sprites>
     </sprites>
     <sprites name="Interface">
@@ -157,6 +176,9 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_spider</object>
       <object>objects\obj_enemy_wolf</object>
+      <object>objects\obj_enemy_skel_warrior</object>
+      <object>objects\obj_enemy_skel_archer</object>
+      <object>objects\obj_enemy_bat</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_rock</object>
@@ -168,13 +190,14 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
     <object>objects\obj_collision</object>
+    <object>objects\obj_enemy_arrow</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_1</room>
     <room>rooms\room0</room>
+    <room>rooms\room_1</room>
+    <room>rooms\room_2</room>
     <room>rooms\room1</room>
     <room>rooms\room_5</room>
-    <room>rooms\room_2</room>
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
   </rooms>

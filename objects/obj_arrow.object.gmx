@@ -19,21 +19,14 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>other</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(invincibility != true){
-    hp-= 1;
-    if(hp &lt;= 0){
-        instance_destroy();
-        script_execute(EarnExp,10);
-    }
-    alarm[3] = 1;
-    invincibility = true;
-    alarm[2] = max_fps/2;  
+            <string>if(sprite_index != Arrow_ability){
+    instance_destroy();
 }
 </string>
           </argument>
@@ -49,14 +42,21 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index != Arrow_ability){
-    instance_destroy();
+            <string>if(invincibility != true){
+    sprite_index = enemyBeingAttacked;
+    hp-= 1;
+    if(hp &lt;= 0){
+        instance_destroy();
+        script_execute(EarnExp,10);
+    }
+    invincibility = true;
+    alarm[0] = max_fps/2;
 }
 </string>
           </argument>
