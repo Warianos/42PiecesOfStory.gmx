@@ -111,6 +111,7 @@
     <sprite>sprites\sprite54</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\spr_collision</sprite>
+    <sprite>sprites\spr_log</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -167,16 +168,19 @@
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
-    <object>objects\obj_collision</object>
+    <object>objects\obj_collision_neutral</object>
+    <object>objects\obj_collision_player</object>
+    <object>objects\object20</object>
+    <object>objects\obj_log</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_5</room>
+    <room>rooms\room_4</room>
+    <room>rooms\room_3</room>
+    <room>rooms\room_2</room>
     <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
-    <room>rooms\room_5</room>
-    <room>rooms\room_2</room>
-    <room>rooms\room_3</room>
-    <room>rooms\room_4</room>
   </rooms>
   <constants number="7">
     <constant name="enemy_spider_y_inc">150</constant>
