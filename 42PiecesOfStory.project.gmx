@@ -269,6 +269,7 @@
   <timelines name="timelines">
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
     <timeline>timelines\Cutscene_CH1_Sleep</timeline>
+    <timeline>timelines\Cutscene_CH1_room2</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
