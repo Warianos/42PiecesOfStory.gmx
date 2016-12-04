@@ -50,7 +50,9 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances/>
+  <instances>
+    <instance objName="obj_warp_room01" x="32" y="128" name="inst_EC386AEA" locked="0" code="" scaleX="1.5" scaleY="5.5" colour="4294967295" rotation="0"/>
+  </instances>
   <tiles>
     <tile bgName="background10" x="0" y="96" w="32" h="32" xo="640" yo="64" id="10002353" name="inst_6A575965" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="background10" x="0" y="128" w="32" h="32" xo="640" yo="64" id="10002354" name="inst_506CF670" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

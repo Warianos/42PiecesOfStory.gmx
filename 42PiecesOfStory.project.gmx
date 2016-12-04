@@ -117,6 +117,52 @@
           <sprite>sprites\spr_goblin_sword_animation_right</sprite>
         </sprites>
       </sprites>
+      <sprites name="Skeleton_Archer">
+        <sprites name="Walk_Animation">
+          <sprite>sprites\spr_skeleton_archer_walk_up</sprite>
+          <sprite>sprites\spr_skeleton_archer_walk_left</sprite>
+          <sprite>sprites\spr_skeleton_archer_walk_right</sprite>
+          <sprite>sprites\spr_skeleton_archer_walk_down</sprite>
+        </sprites>
+        <sprites name="Idle">
+          <sprite>sprites\spr_skeleton_archer_idle_up</sprite>
+          <sprite>sprites\spr_skeleton_archer_idle_left</sprite>
+          <sprite>sprites\spr_skeleton_archer_idle_right</sprite>
+          <sprite>sprites\spr_skeleton_archer_idle_down</sprite>
+        </sprites>
+        <sprites name="Die">
+          <sprite>sprites\spr_skeleton_archer_die</sprite>
+        </sprites>
+        <sprites name="Weapon_Animation">
+          <sprite>sprites\spr_skeleton_archer_attack_up</sprite>
+          <sprite>sprites\spr_skeleton_archer_attack_right</sprite>
+          <sprite>sprites\spr_skeleton_archer_attack_left</sprite>
+          <sprite>sprites\spr_skeleton_archer_attack_down</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="Skeleton_Warrior">
+        <sprites name="Walk_Animation">
+          <sprite>sprites\spr_skeleton_warrior_walk_up</sprite>
+          <sprite>sprites\spr_skeleton_warrior_walk_down</sprite>
+          <sprite>sprites\spr_skeleton_warrior_walk_right</sprite>
+          <sprite>sprites\spr_skeleton_warrior_walk_left</sprite>
+        </sprites>
+        <sprites name="Idle">
+          <sprite>sprites\spr_skeleton_warrior_idle_down</sprite>
+          <sprite>sprites\spr_skeleton_warrior_idle_up</sprite>
+          <sprite>sprites\spr_skeleton_warrior_idle_right</sprite>
+          <sprite>sprites\spr_skeleton_warrior_idle_left</sprite>
+        </sprites>
+        <sprites name="Die">
+          <sprite>sprites\spr_skeleton_warrior_die</sprite>
+        </sprites>
+        <sprites name="Weapon_Animation">
+          <sprite>sprites\spr_skeleton_warrior_attack_up</sprite>
+          <sprite>sprites\spr_skeleton_warrior_attack_down</sprite>
+          <sprite>sprites\spr_skeleton_warrior_attack_right</sprite>
+          <sprite>sprites\spr_skeleton_warrior_attack_left</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\spr_int_curvebow</sprite>
@@ -137,6 +183,13 @@
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_warp_empty</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_option_start</sprite>
+      <sprite>sprites\spr_option_options</sprite>
+      <sprite>sprites\spr_option_quit</sprite>
+      <sprite>sprites\spr_logo</sprite>
+      <sprite>sprites\spr_cursor</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -152,6 +205,8 @@
     <background>background\background10</background>
     <background>background\background11</background>
     <background>background\background12</background>
+    <background>background\background13</background>
+    <background>background\icon</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -164,6 +219,7 @@
     <script>scripts\DrawText.gml</script>
     <script>scripts\Attack.gml</script>
     <script>scripts\Ability.gml</script>
+    <script>scripts\MouseHouver.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -195,8 +251,16 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
     <object>objects\obj_collision</object>
+    <objects name="Menu">
+      <object>objects\spr_start</object>
+      <object>objects\spr_options</object>
+      <object>objects\spr_quit</object>
+      <object>objects\obj_cursor</object>
+      <object>objects\obj_title</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\main_menu</room>
     <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
@@ -205,7 +269,7 @@
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
   </rooms>
-  <constants number="7">
+  <constants number="8">
     <constant name="enemy_spider_y_inc">150</constant>
     <constant name="enemy_spider_x_inc">200</constant>
     <constant name="max_fps">30</constant>
@@ -213,6 +277,7 @@
     <constant name="enemy_hp_wolf">5</constant>
     <constant name="enemy_speed_default">2</constant>
     <constant name="player_hp_default">10</constant>
+    <constant name="enemy_hp_skeleton_archer">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

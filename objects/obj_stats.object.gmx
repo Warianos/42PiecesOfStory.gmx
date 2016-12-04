@@ -105,6 +105,7 @@ draw_sprite_ext(spr_healthbar_full,1,view_xview[0]+95,view_yview[0]+64,obj_playe
 draw_self();
 draw_sprite(obj_int_stances.sprite_index,1,view_xview[0]+55,view_yview[0]+60);
 
+draw_set_color(c_black);
 draw_text_transformed(view_xview[0]+115,view_yview[0]+47,string(obj_player.hp)+"\"+string(player_hp_default),0.75,0.75,0) ;
 
 
