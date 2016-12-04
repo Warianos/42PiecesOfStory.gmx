@@ -126,6 +126,8 @@
       <sprite>sprites\spr_int_dodgeOn</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
+      <sprite>sprites\spr_cutScene_Screen</sprite>
+      <sprite>sprites\spr_cutScene_Screen2</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
@@ -134,6 +136,7 @@
     <sprite>sprites\sprite54</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\spr_collision</sprite>
+    <sprite>sprites\spr_cry_girl</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -161,6 +164,7 @@
     <script>scripts\DrawText.gml</script>
     <script>scripts\Attack.gml</script>
     <script>scripts\Ability.gml</script>
+    <script>scripts\getTimeline.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -177,6 +181,8 @@
       <object>objects\obj_coin_count</object>
       <object>objects\obj_levelUp</object>
       <object>objects\obj_text</object>
+      <object>objects\obj_cutScene_Screen</object>
+      <object>objects\obj_cutScene_Screen2</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
@@ -194,7 +200,12 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
     <object>objects\obj_collision</object>
+    <object>objects\obj_cry_girl</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
+    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\room_1</room>
     <room>rooms\room0</room>

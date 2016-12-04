@@ -61,6 +61,8 @@ stances[2] = "wand";
 stance = stances[0]
 
 //player variables
+cutScene = true;
+flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
 pointerDirection = "down";
@@ -95,6 +97,38 @@ keyA = false;
 keyS = false;
 keyD = false;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>305</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_timeline_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>14</kind>
+            <timeline>Cutscene_CH1_Sleep</timeline>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -145,6 +179,7 @@ invincibility = false;
 //player´s movement
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
+if(cutScene == false){
 var time = get_timer()/1000000;
 dodgeTime = get_timer()/1000000;
 attackTime = get_timer()/1000000;
@@ -155,8 +190,6 @@ pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y);
 if(keyboard_check(ord("S"))){    
     keyS = true;
     script_execute(Walking,0,pixelToMove,"down","normal");
-    script_execute(DrawText,"Batatinhas assadas miami",1,x,y,150);
-    //with(obj_text){instance_destroy();}
 }else{keyS=false;}
 
 if(keyboard_check(ord("W"))){
@@ -219,6 +252,7 @@ if(instance_exists(obj_enemy_wolf)){
         obj_enemy_wolf.state=enemy_state.chase;
     }
 }
+}
 </string>
           </argument>
         </arguments>
@@ -241,7 +275,7 @@ if(instance_exists(obj_enemy_wolf)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(swordHold &lt; 10 &amp;&amp; !ability){
+            <string>if(swordHold &lt; 10 &amp;&amp; !ability &amp;&amp; cutScene == false){
     attacking = true;
     script_execute(Attack,stance,playerDirection); 
 }
@@ -337,7 +371,9 @@ if(ability){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(specialAttackTime &gt;= specialAttackCooldownFin){
+            <string>
+if(cutScene == false){
+if(specialAttackTime &gt;= specialAttackCooldownFin){
         specialAttackCooldownIni = specialAttackTime;
         specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
 
@@ -408,6 +444,7 @@ if(ability){
     }
 }
 
+}
 }
 </string>
           </argument>
