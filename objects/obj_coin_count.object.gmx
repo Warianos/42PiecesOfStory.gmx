@@ -70,15 +70,14 @@
           <argument>
             <kind>1</kind>
             <string>draw_self();
-
 playerObj = obj_player;
 
 if (playerObj.coin_caught == true) {
     playerObj.coins+=1;
     playerObj.coin_caught=false;
 }
-
-draw_text(x,y+20,playerObj.coins);
+draw_set_color(c_black);
+draw_text(x+7,y+1,playerObj.coins);
 </string>
           </argument>
         </arguments>

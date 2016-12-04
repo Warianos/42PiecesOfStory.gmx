@@ -54,13 +54,16 @@ attackCooldown = 0.5;
 
 //stances
 countStances = 0;
-//stances[0] = "walk";
 stances[0] = "sword";
 stances[1] = "curvebow";
 stances[2] = "wand";
 stance = stances[0]
+canUseBow = false;
+canUseStaff = false;
 
 //player variables
+cutScene = true;
+flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
 pointerDirection = "down";
@@ -88,6 +91,7 @@ rightDiag = 0;
 ability = false;
 swordHold = 0;
 holding = false;
+canUseAbility = false;
 
 //check double keys
 keyW = false;
@@ -95,6 +99,38 @@ keyA = false;
 keyS = false;
 keyD = false;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>305</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_timeline_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>14</kind>
+            <timeline>Cutscene_CH1_Sleep</timeline>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -145,6 +181,7 @@ invincibility = false;
 //player´s movement
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
+if(cutScene == false){
 var time = get_timer()/1000000;
 dodgeTime = get_timer()/1000000;
 attackTime = get_timer()/1000000;
@@ -174,6 +211,7 @@ if(keyboard_check(ord("D"))){
 
 //dodge
 if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
+    
     if(dodgeTime &gt;= dodgeCooldownFin){
         dodgeCooldownIni = dodgeTime;
         dodgeCooldownFin = dodgeTime + dodgeCooldown;
@@ -187,8 +225,17 @@ if(keyboard_check(ord("R"))){
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
-        stance = stances[countStances];
         countStances ++;
+        stance = stances[countStances];
+        if(stance == "curvebow" &amp;&amp; !canUseBow){
+            countStances--;
+            stance = stances[countStances]
+        }else if(stance == "wand" &amp;&amp; !canUseStaff){
+            countStances = 0;
+            stance = stances[countStances]
+        }
+        show_debug_message(countStances);
+        
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
     }
 }
@@ -216,6 +263,7 @@ if(instance_exists(obj_enemy_wolf)){
         obj_enemy_wolf.state=enemy_state.chase;
     }
 }
+}
 </string>
           </argument>
         </arguments>
@@ -238,7 +286,7 @@ if(instance_exists(obj_enemy_wolf)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(swordHold &lt; 10 &amp;&amp; !ability){
+            <string>if(swordHold &lt; 10 &amp;&amp; !ability &amp;&amp; cutScene == false){
     attacking = true;
     script_execute(Attack,stance,playerDirection); 
 }
@@ -269,7 +317,7 @@ swordHold = 0;
             <kind>1</kind>
             <string>swordHold++;
 
-if(swordHold &gt;= 30 &amp;&amp; stance ==  "sword"){
+if(swordHold &gt;= 30 &amp;&amp; stance ==  "sword" &amp;&amp; canUseAbility){
     ability =true;
     attacking =true;
 }
@@ -334,11 +382,13 @@ if(ability){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(specialAttackTime &gt;= specialAttackCooldownFin){
+            <string>
+if(cutScene == false){
+if(specialAttackTime &gt;= specialAttackCooldownFin){
         specialAttackCooldownIni = specialAttackTime;
         specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
 
-if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW)){
+if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW &amp;&amp; canUseAbility)){
     ability = true;
     attacking = true;
 }
@@ -405,6 +455,7 @@ if(ability){
     }
 }
 
+}
 }
 </string>
           </argument>
