@@ -165,13 +165,17 @@
       </sprites>
     </sprites>
     <sprites name="Interface">
+      <sprite>sprites\spr_healthbar_full</sprite>
       <sprite>sprites\spr_int_curvebow</sprite>
       <sprite>sprites\spr_int_sword</sprite>
       <sprite>sprites\spr_int_wand</sprite>
+      <sprite>sprites\spr_stats</sprite>
       <sprite>sprites\spr_coin_count</sprite>
       <sprite>sprites\spr_coin_drop</sprite>
       <sprite>sprites\spr_cutScene_Screen</sprite>
       <sprite>sprites\spr_cutScene_Screen2</sprite>
+      <sprite>sprites\spr_bar_default</sprite>
+      <sprite>sprites\spr_dodge_full</sprite>
     </sprites>
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
@@ -235,6 +239,7 @@
       <object>objects\obj_text</object>
       <object>objects\obj_cutScene_Screen</object>
       <object>objects\obj_cutScene_Screen2</object>
+      <object>objects\obj_stats</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>

@@ -71,16 +71,15 @@
     <instance objName="obj_collision" x="288" y="192" name="inst_0B595D1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="288" y="224" name="inst_29DCD0F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="384" y="288" name="inst_14E64D4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="416" y="288" name="inst_B6385710" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="448" y="288" name="inst_7DDB9B53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="480" y="384" name="inst_B6385710" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="480" y="288" name="inst_FE6DE6BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_collision" x="480" y="384" name="inst_5D39641A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="448" y="352" name="inst_5D39641A" locked="0" code="targetRoom = room_2;&#xA;targetX = 90;&#xA;targetY = 380;&#xA;areaUnlocked = true;" scaleX="-0.0322580635547638" scaleY="2.03225803375244" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="448" y="384" name="inst_4E82A1C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="416" y="384" name="inst_E85276CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="384" y="384" name="inst_96D99F33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="96" y="64" name="inst_6CEB2840" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_coin_count" x="96" y="96" name="inst_8075D0DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_warp_room01" x="480" y="352" name="inst_86A16494" locked="0" code="targetRoom = room_2;&#xA;targetX = 90;&#xA;targetY = 380;&#xA;areaUnlocked = true;&#xA;" scaleX="1.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp_room01" x="448" y="384" name="inst_A45C5A70" locked="0" code="targetRoom = room_2;&#xA;targetX = 90;&#xA;targetY = 380;&#xA;areaUnlocked = true;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stats" x="96" y="64" name="inst_FC660ED4" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background10" x="416" y="352" w="32" h="32" xo="864" yo="192" id="10000759" name="inst_FE436366" depth="10" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
