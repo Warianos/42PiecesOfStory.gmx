@@ -261,7 +261,6 @@
     <object>objects\obj_collision_player</object>
     <object>objects\object20</object>
     <object>objects\obj_log</object>
-    <object>objects\obj_collision</object>
     <objects name="Menu">
       <object>objects\spr_start</object>
       <object>objects\spr_options</object>
@@ -277,11 +276,11 @@
     <timeline>timelines\Cutscene_CH1_room2</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\main_menu</room>
     <room>rooms\room_5</room>
     <room>rooms\room_4</room>
     <room>rooms\room_3</room>
     <room>rooms\room_2</room>
-    <room>rooms\main_menu</room>
     <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
