@@ -222,6 +222,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
+    script_execute(getTimeline,Cutscene_CH1_room2,false);
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 

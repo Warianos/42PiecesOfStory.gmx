@@ -19,48 +19,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-with(obj_player){
-    cutScene = true;
-    sprite_index = asset_get_index("spr_idle_walk_right");
-    
-    script_execute(DrawText,"Hey...",0.5,x,y,150);
-    with(txt){depth = -1000;}
-       
+            <string>instance_create(300, 256, obj_enemy_goblin);
+instance_create(332, 256, obj_cry_girl);
 
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>30</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    with(txt){instance_destroy();}
-    hspeed = -4
-    vspeed = -2
-       
+with(obj_player){cutScene = true;}
 
-}
+with (obj_enemy_goblin)
+   {
+   sprite_index = asset_get_index("spr_goblin_idle_left");
+   }
+   
+with (obj_cry_girl)
+   {
+   sprite_index = asset_get_index("spr_cry_girl");
+   image_speed = 0.3
+   
+   }
 </string>
           </argument>
         </arguments>
@@ -68,7 +42,7 @@ with(obj_player){
     </event>
   </entry>
   <entry>
-    <step>33</step>
+    <step>20</step>
     <event>
       <action>
         <libid>1</libid>
@@ -86,126 +60,19 @@ with(obj_player){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = -4
-    vspeed = -1
+            <string>with (obj_enemy_goblin){
+   sprite_index = asset_get_index("spr_goblin_idle_left");
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>36</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = -4
-    vspeed = -0.5
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>40</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = -4
-    vspeed = -0
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>43</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = -4
-    vspeed = +0.5
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>46</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = -4
-    vspeed = +2
-}
+   
+
+
+with(obj_cry_girl){
+ script_execute(DrawText,"SIR! PLEASE HELP ME!",1,x,y,150);
+   with(txt){
+    depth = -1000;
+   }
+   }
+
 </string>
           </argument>
         </arguments>
@@ -231,12 +98,87 @@ with(obj_player){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player){
-    hspeed = 0
-    vspeed = 0
-    
+            <string>
+with(obj_cry_girl){
+with(txt){instance_destroy();}
 }
 
+with (obj_enemy_goblin)
+   {
+   sprite_index = asset_get_index("spr_goblin_idle_right");
+   script_execute(DrawText,"IF YOU DO NOT SHUT UP#I WILL EAT YOU#RIGHT HERE RIGHT NOW!",1,x,y,150);
+   with(txt){
+    depth = -1000;
+   }
+   }
+   
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>55</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = -4;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>57</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = -2;
+   
+   
+   }
 </string>
           </argument>
         </arguments>
@@ -262,13 +204,80 @@ with(obj_player){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player){
-    
-    sprite_index = asset_get_index("spr_idle_walk_left");
-    
-       
+            <string>
 
-}
+with (obj_enemy_goblin)
+   {
+   vspeed = 0;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>63</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = +2;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>65</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = +4;
+   
+   
+   }
 </string>
           </argument>
         </arguments>
@@ -294,9 +303,14 @@ with(obj_player){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_right");
-}
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = 0;
+   
+   
+   }
 </string>
           </argument>
         </arguments>
@@ -304,157 +318,7 @@ with(obj_player){
     </event>
   </entry>
   <entry>
-    <step>80</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_left");
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>120</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_right");
-    with(txt){instance_destroy();}
-    script_execute(DrawText,"...",0.8,x,y,150);
-    with(txt){depth = -1000;}
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>170</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-    with(txt){instance_destroy();}
-    script_execute(DrawText,"Yes!, it is me, your sword",0.8,x,y,150);
-    with(txt){depth = -1000;}
-    
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>230</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-with(txt){instance_destroy();}
-script_execute(DrawText,"Down here!, in your right hand!",1,x,y,150);
-with(txt){depth = -1000;}
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>280</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_player){
-with(txt){instance_destroy();}
-script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try it!",1,x,y,150);
-with(txt){depth = -1000;}
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>470</step>
+    <step>200</step>
     <event>
       <action>
         <libid>1</libid>
@@ -473,10 +337,246 @@ with(txt){depth = -1000;}
           <argument>
             <kind>1</kind>
             <string>
-with(obj_player){
-    cutScene = false;
+
+with (obj_enemy_goblin)
+   {
+   with(txt){instance_destroy();}
+   sprite_index = asset_get_index("spr_goblin_idle_left");
+   script_execute(DrawText,"YOU SHOULD NOT COME HERE BOY#MAMA IS GOING TO BE SO HAPPY#IF I BRING 2 KIDS INSTEAD OF 1#MUHAHAHAHAHAHAHAHAHA",1,x,y,150);
+   with(txt){
+    depth = -1000;
+   }
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>205</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = -4;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>207</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = -2;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>210</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = 0;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>213</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = +2;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>215</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = +4;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>220</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+with (obj_enemy_goblin)
+   {
+   vspeed = 0;
+   
+   
+   }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>300</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(obj_enemy_goblin){
     with(txt){instance_destroy();}
-    
+
+}
+
+with(obj_player){
+    with(obj_player){cutScene = false;}
 }
 </string>
           </argument>
