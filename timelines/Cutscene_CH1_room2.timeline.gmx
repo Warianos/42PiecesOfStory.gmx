@@ -56,8 +56,8 @@ with(obj_player){
             <kind>1</kind>
             <string>with(obj_player){
     with(txt){instance_destroy();}
-    hspeed = -4
-    vspeed = -2
+    hspeed = -2
+    vspeed = -1
        
 
 }
@@ -87,8 +87,8 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    hspeed = -4
-    vspeed = -1
+    hspeed = -2
+    vspeed = -0.5
 }
 </string>
           </argument>
@@ -116,8 +116,8 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    hspeed = -4
-    vspeed = -0.5
+    hspeed = -2
+    vspeed = -0.25
 }
 </string>
           </argument>
@@ -145,7 +145,7 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    hspeed = -4
+    hspeed = -2
     vspeed = -0
 }
 </string>
@@ -174,8 +174,8 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    hspeed = -4
-    vspeed = +0.5
+    hspeed = -2
+    vspeed = +0.25
 }
 </string>
           </argument>
@@ -203,8 +203,8 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    hspeed = -4
-    vspeed = +2
+    hspeed = -2
+    vspeed = +1
 }
 </string>
           </argument>
@@ -444,7 +444,7 @@ with(txt){depth = -1000;}
             <kind>1</kind>
             <string>with(obj_player){
 with(txt){instance_destroy();}
-script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try it!",1,x,y,150);
+script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try using you R key!",1,x,y,150);
 with(txt){depth = -1000;}
 }
 </string>

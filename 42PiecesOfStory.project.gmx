@@ -318,6 +318,7 @@
     <timeline>timelines\Cutscene_CH1_room2</timeline>
     <timeline>timelines\Cutscene_CH1_room5</timeline>
     <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
+    <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\main_menu</room>

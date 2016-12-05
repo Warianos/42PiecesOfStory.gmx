@@ -62,7 +62,7 @@ canUseBow = false;
 canUseStaff = false;
 
 //player variables
-cutScene = true;
+cutScene = false;
 flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
@@ -131,7 +131,7 @@ audio_sound_gain(global.Music,0.1,0);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -247,7 +247,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
-    script_execute(getTimeline,Cutscene_CH1_room2,false);
+    script_execute(getTimeline,Cutscene_CH1_room5_cat,false);
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
