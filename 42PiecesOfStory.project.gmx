@@ -112,6 +112,7 @@
         <sprite>sprites\spr_bat_down_hit</sprite>
         <sprite>sprites\spr_bat_up</sprite>
         <sprite>sprites\spr_bat_up_hit</sprite>
+      </sprites>
       <sprites name="Goblin">
         <sprites name="Walk_Animation">
           <sprite>sprites\spr_goblin_walk_animation_up</sprite>
@@ -238,7 +239,7 @@
     <script>scripts\EarnExp.gml</script>
     <script>scripts\ImageOrientation.gml</script>
     <script>scripts\Dodge.gml</script>
-	<script>scripts\DrawInterface.gml</script>
+    <script>scripts\DrawInterface.gml</script>
     <script>scripts\DrawText.gml</script>
     <script>scripts\Attack.gml</script>
     <script>scripts\Ability.gml</script>
@@ -279,7 +280,6 @@
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
-    <object>objects\obj_collision</object>
     <object>objects\obj_enemy_arrow</object>
     <object>objects\obj_collision_neutral</object>
     <object>objects\obj_collision_player</object>
@@ -301,11 +301,6 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
-    <room>rooms\room_5</room>
-    <room>rooms\room_4</room>
-    <room>rooms\room_3</room>
-    <room>rooms\room_2</room>
-    <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
