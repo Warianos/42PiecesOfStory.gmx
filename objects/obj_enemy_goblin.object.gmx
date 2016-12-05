@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>direction = 180
+flagRandom = false;
 hp = 15
 /*attacking = false
 beingAttacked = false*/
@@ -79,7 +80,9 @@ isBat = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Grid = mp_grid_create(0,0, room_width / 32, room_height / 32, 32, 32)
+            <string>
+if(flagRandom){
+Grid = mp_grid_create(0,0, room_width / 32, room_height / 32, 32, 32)
 Path = path_add()
 
 //turn the skeleton to face the player
@@ -105,7 +108,7 @@ switch(state){
             path_start(Path, 1, path_action_continue, true)
     }
 }
-
+}
 
 
 

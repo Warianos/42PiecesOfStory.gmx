@@ -66,7 +66,7 @@ canUseBow = false;
 canUseStaff = false;
 
 //player variables
-cutScene = false;
+cutScene = true;
 flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
@@ -135,7 +135,7 @@ audio_sound_gain(global.Music,0.1,0);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>1</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -290,7 +290,9 @@ if(keyboard_check(ord("D"))){
    keyD=true;
    script_execute(Walking,pixelToMove,0,"right","normal");
 }else{keyD=false;}
-
+if(keyboard_check(ord("P"))){    
+    game_restart();
+    }
 //dodge
 if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
     

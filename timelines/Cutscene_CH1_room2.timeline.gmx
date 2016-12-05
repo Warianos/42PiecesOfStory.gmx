@@ -21,7 +21,7 @@
             <kind>1</kind>
             <string>with(obj_player){
     cutScene = true;
-    sprite_index = asset_get_index("spr_idle_walk_right");
+    sprite_index = asset_get_index("spr_idle_sword_right");
     
     script_execute(DrawText,"Hey...",0.5,x,y,150);
     with(txt){depth = -1000;}
@@ -262,7 +262,7 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_left");
+    sprite_index = asset_get_index("spr_idle_sword_left");
 }
 </string>
           </argument>
@@ -290,7 +290,7 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_right");
+    sprite_index = asset_get_index("spr_idle_sword_right");
 }
 </string>
           </argument>
@@ -318,7 +318,7 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_left");
+    sprite_index = asset_get_index("spr_idle_sword_left");
 }
 </string>
           </argument>
@@ -346,7 +346,7 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_walk_right");
+    sprite_index = asset_get_index("spr_idle_sword_right");
     with(txt){instance_destroy();}
     script_execute(DrawText,"...",0.8,x,y,150);
     with(txt){depth = -1000;}

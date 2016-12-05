@@ -20,7 +20,8 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    script_execute(DrawText,"Thank you for playing our demo#See you next assigment :)",0.3,x,y,150);
+    sprite_index = asset_get_index("spr_idle_" + string(stance) + "_right");
+    script_execute(DrawText,"Thank you for playing our demo#If you want to know what happened to the cat#Come play with me next assigment :)",0.7,x,y,150);
 }
 </string>
           </argument>
@@ -29,7 +30,7 @@
     </event>
   </entry>
   <entry>
-    <step>100</step>
+    <step>300</step>
     <event>
       <action>
         <libid>1</libid>

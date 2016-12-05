@@ -23,6 +23,7 @@
 instance_create(332, 256, obj_cry_girl);
 */
 with(obj_player){
+    sprite_index = asset_get_index("spr_idle_"+ string(stance) +"_right");
     invincibility = true
     cutScene = true;
 }
@@ -30,6 +31,7 @@ with(obj_player){
 
 with (obj_enemy_goblin)
    {
+   flagRandom=true;
    sprite_index = asset_get_index("spr_goblin_idle_left");
    }
    
@@ -556,7 +558,7 @@ with (obj_enemy_goblin)
     </event>
   </entry>
   <entry>
-    <step>450</step>
+    <step>400</step>
     <event>
       <action>
         <libid>1</libid>
