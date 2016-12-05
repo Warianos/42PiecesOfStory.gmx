@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\main</sound>
+    <sound>sound\dark</sound>
+    <sound>sound\combat</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player">
       <sprites name="Spell_Animation">
@@ -192,6 +196,8 @@
       <sprite>sprites\spr_option_quit</sprite>
       <sprite>sprites\spr_logo</sprite>
       <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_game_over</sprite>
+      <sprite>sprites\spr_option_continue</sprite>
     </sprites>
     <sprite>sprites\spr_cry_girl</sprite>
   </sprites>
@@ -211,6 +217,7 @@
     <background>background\background12</background>
     <background>background\background13</background>
     <background>background\icon</background>
+    <background>background\game_over</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -231,6 +238,15 @@
     <font>fonts\fnt_text</font>
   </fonts>
   <objects name="objects">
+    <objects name="Menu">
+      <object>objects\spr_start</object>
+      <object>objects\spr_options</object>
+      <object>objects\spr_quit</object>
+      <object>objects\obj_cursor</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_game_over</object>
+      <object>objects\obj_continue</object>
+    </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_debugger</object>
     <objects name="Interface">
@@ -261,13 +277,6 @@
     <object>objects\obj_collision_player</object>
     <object>objects\object20</object>
     <object>objects\obj_log</object>
-    <objects name="Menu">
-      <object>objects\spr_start</object>
-      <object>objects\spr_options</object>
-      <object>objects\spr_quit</object>
-      <object>objects\obj_cursor</object>
-      <object>objects\obj_title</object>
-    </objects>
     <object>objects\obj_cry_girl</object>
   </objects>
   <timelines name="timelines">
@@ -284,6 +293,7 @@
     <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <constants number="8">
     <constant name="enemy_spider_y_inc">150</constant>
