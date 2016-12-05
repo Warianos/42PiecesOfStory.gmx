@@ -27,10 +27,13 @@
             <kind>1</kind>
             <string>//calculate random position to spawn the enemy, and check if it is not 
 //spawning too close to the player
+invincibility = false
+globalvar isBat
 while(distance_to_object(obj_player) &lt; 10){
-    x = irandom(room_width);
-    y = irandom(room_height);
+    x = irandom(room_width)
+    y = irandom(room_height)
 }
+globalvar enemyBeingAttacked
 
 </string>
           </argument>
@@ -60,6 +63,29 @@ while(distance_to_object(obj_player) &lt; 10){
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>invincibility = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -77,15 +103,61 @@ while(distance_to_object(obj_player) &lt; 10){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//alarm triggered due to the enemy hitting the player, the enemy shall stay in stop
-//state for 30 frames (1 sec)
+            <string>//alarm triggered after the player hitted the enemy
 state = enemy_state.chase;
+invincibility = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_hit">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited()
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//after striking the player, the enemy shall remain still for 1 sec
+state = enemy_state.stop;
+alarm[0] = max_fps;
+</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -106,29 +178,6 @@ state = enemy_state.chase;
     game_restart();
 }
 invincibility = true;
-alarm[0] = max_fps;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//after striking the player, the enemy shall remain still for 1 sec
-state = enemy_state.stop;
 alarm[0] = max_fps;
 </string>
           </argument>

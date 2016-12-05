@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\main</sound>
+    <sound>sound\dark</sound>
+    <sound>sound\combat</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player">
       <sprites name="Spell_Animation">
@@ -79,6 +83,7 @@
     <sprites name="Ammo_Effects">
       <sprites name="Arrows">
         <sprite>sprites\Arrow</sprite>
+        <sprite>sprites\Arrow_enemy</sprite>
         <sprite>sprites\Arrow_ability</sprite>
       </sprites>
       <sprites name="Magic">
@@ -93,6 +98,24 @@
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
         <sprite>sprites\spr_spider_hit</sprite>
+      </sprites>
+      <sprites name="Skeleton_Warrior">
+        <sprite>sprites\spr_skel_war_left</sprite>
+        <sprite>sprites\spr_skel_war_left_hit</sprite>
+        <sprite>sprites\spr_skel_war_right</sprite>
+        <sprite>sprites\spr_skel_war_right_hit</sprite>
+        <sprite>sprites\spr_skel_war_left_attack</sprite>
+        <sprite>sprites\spr_skel_war_right_attack</sprite>
+      </sprites>
+      <sprites name="Bat">
+        <sprite>sprites\spr_bat_right</sprite>
+        <sprite>sprites\spr_bat_right_hit</sprite>
+        <sprite>sprites\spr_bat_left</sprite>
+        <sprite>sprites\spr_bat_left_hit</sprite>
+        <sprite>sprites\spr_bat_down</sprite>
+        <sprite>sprites\spr_bat_down_hit</sprite>
+        <sprite>sprites\spr_bat_up</sprite>
+        <sprite>sprites\spr_bat_up_hit</sprite>
       </sprites>
       <sprites name="Goblin">
         <sprites name="Walk_Animation">
@@ -193,6 +216,8 @@
       <sprite>sprites\spr_option_quit</sprite>
       <sprite>sprites\spr_logo</sprite>
       <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_game_over</sprite>
+      <sprite>sprites\spr_option_continue</sprite>
     </sprites>
     <sprite>sprites\spr_cry_girl</sprite>
     <sprites name="Cat">
@@ -218,6 +243,7 @@
     <background>background\background12</background>
     <background>background\background13</background>
     <background>background\icon</background>
+    <background>background\game_over</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -227,6 +253,7 @@
     <script>scripts\EarnExp.gml</script>
     <script>scripts\ImageOrientation.gml</script>
     <script>scripts\Dodge.gml</script>
+    <script>scripts\DrawInterface.gml</script>
     <script>scripts\DrawText.gml</script>
     <script>scripts\Attack.gml</script>
     <script>scripts\Ability.gml</script>
@@ -238,6 +265,15 @@
     <font>fonts\fnt_text</font>
   </fonts>
   <objects name="objects">
+    <objects name="Menu">
+      <object>objects\spr_start</object>
+      <object>objects\spr_options</object>
+      <object>objects\spr_quit</object>
+      <object>objects\obj_cursor</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_game_over</object>
+      <object>objects\obj_continue</object>
+    </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_debugger</object>
     <objects name="Interface">
@@ -253,6 +289,9 @@
       <object>objects\obj_enemy</object>
       <object>objects\obj_enemy_spider</object>
       <object>objects\obj_enemy_wolf</object>
+      <object>objects\obj_enemy_skel_warrior</object>
+      <object>objects\obj_enemy_skel_archer</object>
+      <object>objects\obj_enemy_bat</object>
       <object>objects\obj_enemy_goblin</object>
     </objects>
     <object>objects\obj_enemy_spawner</object>
@@ -264,17 +303,11 @@
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_coin_drop</object>
+    <object>objects\obj_enemy_arrow</object>
     <object>objects\obj_collision_neutral</object>
     <object>objects\obj_collision_player</object>
     <object>objects\object20</object>
     <object>objects\obj_log</object>
-    <objects name="Menu">
-      <object>objects\spr_start</object>
-      <object>objects\spr_options</object>
-      <object>objects\spr_quit</object>
-      <object>objects\obj_cursor</object>
-      <object>objects\obj_title</object>
-    </objects>
     <object>objects\obj_cry_girl</object>
     <object>objects\obj_fire</object>
     <object>objects\obj_cat</object>
@@ -288,13 +321,14 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
-    <room>rooms\room_5</room>
-    <room>rooms\room_4</room>
-    <room>rooms\room_3</room>
-    <room>rooms\room_2</room>
-    <room>rooms\room_1</room>
     <room>rooms\room0</room>
+    <room>rooms\room_1</room>
+    <room>rooms\room_2</room>
     <room>rooms\room1</room>
+    <room>rooms\rm_game_over</room>
+    <room>rooms\room_5</room>
+    <room>rooms\room_3</room>
+    <room>rooms\room_4</room>
   </rooms>
   <constants number="8">
     <constant name="enemy_spider_y_inc">150</constant>
