@@ -121,6 +121,7 @@
         <sprites name="Walk_Animation">
           <sprite>sprites\spr_goblin_walk_animation_up</sprite>
           <sprite>sprites\spr_goblin_walk_animation_left</sprite>
+          <sprite>sprites\spr_goblin_walk_left_hit</sprite>
           <sprite>sprites\spr_goblin_walk_animation_down</sprite>
           <sprite>sprites\spr_goblin_walk_animation_right</sprite>
         </sprites>

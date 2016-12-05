@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>//global variable 
 roomCleared = false
+roomSuperCleared = false
+batatinhas = true
+caralho = false
 
 //Change stance time variables
 changeWepCooldownIni = 0;
@@ -161,6 +164,29 @@ audio_sound_gain(global.Music,0.1,0);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>invincibility = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -210,6 +236,12 @@ if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
     script_execute(getTimeline,Cutscene_CH1_room2,false)
     //roomCleared = false
 }
+
+if(room == 6 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomSuperCleared){
+    roomSuperCleared = true
+    script_execute(getTimeline,Cutscene_CH1_room5_cat,false)
+    //roomCleared = false
+}
     
 if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
     obj_warp_room01.areaUnlocked = true
@@ -220,6 +252,14 @@ if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
 
 if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
     obj_warp_room01.areaUnlocked = true
+}
+if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
+    script_execute(getTimeline, FinalDemo, false)
+    caralho = true
+}
+if(room == 6 &amp;&amp; batatinhas){
+    script_execute(getTimeline,Cutscene_CH1_room5,false)
+    batatinhas = false
 }
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
@@ -264,7 +304,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
-    script_execute(getTimeline,Cutscene_CH1_room5_cat,false);
+    //script_execute(getTimeline,Cutscene_CH1_room5_cat,false);
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 

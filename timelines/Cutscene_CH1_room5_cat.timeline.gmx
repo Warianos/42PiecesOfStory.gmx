@@ -19,17 +19,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_cry_girl){instance_destroy();}
-with(obj_enemy_goblin){instance_destroy();}
-
-instance_create(288,256,obj_cry_girl);
-instance_create(256,256,obj_enemy_goblin);
-with(obj_player){cutScene = true;}
+            <string>with(obj_player){cutScene = true;}
   
 with (obj_cry_girl)
    {
-   sprite_index = asset_get_index("spr_cry_girl");
-   image_speed = 0.3;
+   /*sprite_index = asset_get_index("spr_cry_girl");
+   image_speed = 0.3;*/
    script_execute(DrawText,"Oh, thank you sir, if u did not help m...",0.8,x,y,150);
    with(txt){depth = -1000;}
    
