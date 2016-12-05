@@ -97,6 +97,8 @@
     <instance objName="obj_collision_neutral" x="0" y="512" name="inst_D78CCDF8" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_neutral" x="512" y="0" name="inst_3E71A843" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_neutral" x="0" y="-32" name="inst_9EF0C611" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_skel_archer" x="288" y="480" name="inst_69E019CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp_room01" x="480" y="64" name="inst_34D5011C" locked="0" code="targetRoom = room_4;&#xA;targetX = 96;&#xA;targetY = 40;&#xA;areaUnlocked = false;&#xA;" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background10" x="320" y="160" w="32" h="32" xo="736" yo="96" id="10001040" name="inst_E2E41E85" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

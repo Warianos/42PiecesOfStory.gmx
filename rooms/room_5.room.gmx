@@ -2,13 +2,13 @@
 <room>
   <caption></caption>
   <width>500</width>
-  <height>200</height>
+  <height>500</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>0</enableViews>
@@ -57,10 +57,9 @@
     <instance objName="obj_collision_neutral" x="0" y="-32" name="inst_E528DBFF" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="0" y="0" name="inst_42897C99" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="320" y="160" name="inst_742BA8E4" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="64" y="96" name="inst_8BEC77DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_log" x="288" y="96" name="inst_EC958C3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_log" x="352" y="32" name="inst_0748A0A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_warp_room01" x="32" y="128" name="inst_EC386AEA" locked="0" code="" scaleX="1.5" scaleY="5.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp_room01" x="32" y="128" name="inst_EC386AEA" locked="0" code="targetRoom = room_4;&#xA;targetX = 384;&#xA;targetY = 384;&#xA;areaUnlocked = false;&#xA;" scaleX="1.5" scaleY="5.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background10" x="0" y="96" w="32" h="32" xo="640" yo="64" id="10002353" name="inst_6A575965" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -19,8 +19,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-with(obj_player){
+            <string>with(obj_player){
     cutScene = true;
     sprite_index = asset_get_index("spr_idle_walk_right");
     
@@ -263,11 +262,7 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    
     sprite_index = asset_get_index("spr_idle_walk_left");
-    
-       
-
 }
 </string>
           </argument>
@@ -444,7 +439,7 @@ with(txt){depth = -1000;}
             <kind>1</kind>
             <string>with(obj_player){
 with(txt){instance_destroy();}
-script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try it!",1,x,y,150);
+script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try it! Press R",1,x,y,150);
 with(txt){depth = -1000;}
 }
 </string>
@@ -474,6 +469,7 @@ with(txt){depth = -1000;}
             <kind>1</kind>
             <string>
 with(obj_player){
+    canUseBow = true
     cutScene = false;
     with(txt){instance_destroy();}
     

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//global variable 
+roomCleared = false
 
 //Change stance time variables
 changeWepCooldownIni = 0;
@@ -62,7 +63,7 @@ canUseBow = false;
 canUseStaff = false;
 
 //player variables
-cutScene = true;
+cutScene = false;
 flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
@@ -131,7 +132,7 @@ audio_sound_gain(global.Music,0.1,0);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -204,6 +205,22 @@ invincibility = false;
             <string>
 
 //player´s movement
+if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
+    roomCleared = true
+    script_execute(getTimeline,Cutscene_CH1_room2,false)
+    //roomCleared = false
+}
+    
+if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
+if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
+
+if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
 if(cutScene == false){
@@ -247,7 +264,7 @@ if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
 
 //clicar tecla para mudar de stance
 if(keyboard_check(ord("R"))){
-    script_execute(getTimeline,Cutscene_CH1_room2,false);
+    
     if(time &gt;= changeWepCooldownFin){
         changeWepCooldownIni = time;
         changeWepCooldownFin = time + changeWepCooldown; 
@@ -260,7 +277,7 @@ if(keyboard_check(ord("R"))){
             countStances = 0;
             stance = stances[countStances]
         }
-        show_debug_message(countStances);
+        //show_debug_message(countStances);
         
         if(countStances &gt; (array_length_1d(stances) - 1)) countStances = 0; 
     }
@@ -414,7 +431,7 @@ if(specialAttackTime &gt;= specialAttackCooldownFin){
         specialAttackCooldownIni = specialAttackTime;
         specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
 
-if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW &amp;&amp; canUseAbility)){
+if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW) &amp;&amp; canUseAbility){
     ability = true;
     attacking = true;
 }

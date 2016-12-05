@@ -302,6 +302,7 @@
     <object>objects\obj_fireball</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_sword_hit</object>
+    <object>objects\obj_spawner_room2</object>
     <object>objects\obj_coin_drop</object>
     <object>objects\obj_enemy_arrow</object>
     <object>objects\obj_collision_neutral</object>
