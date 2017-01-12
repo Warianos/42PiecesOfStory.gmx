@@ -79,12 +79,16 @@
           <sprite>sprites\spr_sword_hit_right</sprite>
         </sprites>
       </sprites>
+      <sprites name="Defense">
+        <sprite>sprites\spr_shield_animation</sprite>
+      </sprites>
     </sprites>
     <sprites name="Ammo_Effects">
       <sprites name="Arrows">
         <sprite>sprites\Arrow</sprite>
         <sprite>sprites\Arrow_enemy</sprite>
         <sprite>sprites\Arrow_ability</sprite>
+        <sprite>sprites\Arrow_stun</sprite>
       </sprites>
       <sprites name="Magic">
         <sprite>sprites\Fireball</sprite>
@@ -216,6 +220,9 @@
       <sprite>sprites\spr_collision_neutral</sprite>
       <sprite>sprites\spr_warp_room</sprite>
       <sprite>sprites\spr_mage_boss_pillar</sprite>
+      <sprite>sprites\spr_ice_block</sprite>
+      <sprite>sprites\spr_ice_block_unmovable</sprite>
+      <sprite>sprites\spr_heart</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
@@ -223,22 +230,45 @@
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_log</sprite>
     <sprite>sprites\spr_warp_empty</sprite>
-    <sprites name="Menu">
-      <sprite>sprites\spr_option_start</sprite>
-      <sprite>sprites\spr_option_options</sprite>
-      <sprite>sprites\spr_option_quit</sprite>
-      <sprite>sprites\spr_logo</sprite>
-      <sprite>sprites\spr_cursor</sprite>
-      <sprite>sprites\spr_game_over</sprite>
-      <sprite>sprites\spr_option_continue</sprite>
-    </sprites>
     <sprite>sprites\spr_cry_girl</sprite>
+    <sprites name="Bag Menu">
+      <sprite>sprites\spr_bag</sprite>
+      <sprite>sprites\spr_equipment</sprite>
+      <sprite>sprites\spr_totems</sprite>
+      <sprite>sprites\spr_skills</sprite>
+      <sprite>sprites\spr_submenu_skill_sword</sprite>
+      <sprite>sprites\spr_submenu_skill_bow</sprite>
+      <sprite>sprites\spr_submenu_skill_staff</sprite>
+      <sprite>sprites\spr_option_mask</sprite>
+      <sprite>sprites\spr_point_mask</sprite>
+      <sprite>sprites\spr_point_strength</sprite>
+      <sprite>sprites\spr_point_intelligence</sprite>
+      <sprite>sprites\spr_point_agility</sprite>
+      <sprite>sprites\spr_submenu_totem</sprite>
+      <sprite>sprites\spr_collision_totem</sprite>
+      <sprite>sprites\spr_totem_hover</sprite>
+      <sprite>sprites\sprite155</sprite>
+      <sprite>sprites\spr_buy_collision</sprite>
+      <sprite>sprites\spr_submenu_totem_not_bought</sprite>
+    </sprites>
     <sprites name="Cat">
       <sprite>sprites\spr_cat_walk_down</sprite>
       <sprite>sprites\spr_cat_walk_left</sprite>
       <sprite>sprites\spr_cat_walk_right</sprite>
       <sprite>sprites\spr_cat_walk_up</sprite>
     </sprites>
+    <sprites name="Menu">
+      <sprite>sprites\spr_option_start</sprite>
+      <sprite>sprites\spr_option_intermedio</sprite>
+      <sprite>sprites\spr_option_options</sprite>
+      <sprite>sprites\spr_option_quit</sprite>
+      <sprite>sprites\spr_logo</sprite>
+      <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_game_over</sprite>
+      <sprite>sprites\spr_option_continue</sprite>
+      <sprite>sprites\spr_option_final</sprite>
+    </sprites>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -257,6 +287,9 @@
     <background>background\background13</background>
     <background>background\icon</background>
     <background>background\game_over</background>
+    <background>background\background16</background>
+    <background>background\background17</background>
+    <background>background\background18</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -274,6 +307,15 @@
     <script>scripts\getTimeline.gml</script>
     <script>scripts\MageFrostAttack.gml</script>
     <script>scripts\MageBlizzard.gml</script>
+    <script>scripts\setSubMenu.gml</script>
+    <script>scripts\setMainMenu.gml</script>
+    <script>scripts\setOptionsSubmenu.gml</script>
+    <script>scripts\setSkillPoint.gml</script>
+    <script>scripts\setSkillCollisions.gml</script>
+    <script>scripts\drawSkillPoints.gml</script>
+    <script>scripts\pushBlock.gml</script>
+    <script>scripts\moveBlock.gml</script>
+    <script>scripts\checkBlocks.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -288,9 +330,11 @@
       <object>objects\obj_title</object>
       <object>objects\obj_game_over</object>
       <object>objects\obj_continue</object>
+      <object>objects\obj_intermedio</object>
+      <object>objects\obj_final</object>
     </objects>
     <object>objects\obj_player</object>
-    <object>objects\obj_debugger</object>
+    <object>objects\obj_player_shield</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
       <object>objects\obj_coin_count</object>
@@ -299,6 +343,19 @@
       <object>objects\obj_cutScene_Screen</object>
       <object>objects\obj_cutScene_Screen2</object>
       <object>objects\obj_stats</object>
+      <object>objects\obj_button_bag</object>
+      <object>objects\obj_button_equipment</object>
+      <object>objects\obj_button_skills</object>
+      <object>objects\obj_button_totems</object>
+      <object>objects\obj_button</object>
+      <object>objects\obj_submenu_skill</object>
+      <object>objects\obj_option_collision</object>
+      <object>objects\obj_point_collision</object>
+      <object>objects\obj_point_skill</object>
+      <object>objects\obj_submenu_totem</object>
+      <object>objects\obj_totem_collision</object>
+      <object>objects\obj_totem</object>
+      <object>objects\obj_buy_collision</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
@@ -316,9 +373,8 @@
         <object>objects\obj_frost_attack</object>
         <object>objects\obj_blizzard</object>
       </objects>
+      <object>objects\obj_enemy_spawner</object>
     </objects>
-    <object>objects\obj_enemy_spawner</object>
-    <object>objects\obj_rock</object>
     <object>objects\obj_target</object>
     <object>objects\obj_warp_room01</object>
     <object>objects\obj_weapon</object>
@@ -327,15 +383,24 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_spawner_room2</object>
     <object>objects\obj_coin_drop</object>
-    <object>objects\obj_collision_neutral</object>
-    <object>objects\obj_collision_player</object>
-    <object>objects\obj_log</object>
-    <object>objects\obj_cry_girl</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_cat</object>
     <objects name="neutral">
       <object>objects\obj_pillar</object>
     </objects>
+    <object>objects\obj_collision_player</object>
+    <objects name="Neutral">
+      <object>objects\obj_cry_girl</object>
+      <object>objects\obj_ice_block</object>
+      <object>objects\obj_cat</object>
+      <object>objects\obj_fire</object>
+      <object>objects\obj_log</object>
+      <object>objects\obj_collision_neutral</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_debugger</object>
+      <object>objects\obj_ice_block_unmovable</object>
+      <object>objects\obj_heart</object>
+      <object>objects\obj_wall</object>
+    </objects>
+    <object>objects\object20</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
@@ -346,29 +411,23 @@
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room_MageFinal</room>
-    <room>rooms\room_MageWolves</room>
-    <room>rooms\room_MageShields</room>
-    <room>rooms\room0</room>
     <room>rooms\main_menu</room>
+    <room>rooms\room0</room>
+    <room>rooms\rm_game_over</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
-    <room>rooms\room1</room>
-    <room>rooms\rm_game_over</room>
-    <room>rooms\room_5</room>
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
+    <room>rooms\room_5</room>
+    <room>rooms\room_6</room>
+    <room>rooms\room_7</room>
+    <room>rooms\room_8</room>
+    <room>rooms\room_9</room>
+    <room>rooms\room_10</room>
+    <room>rooms\room_11</room>
+    <room>rooms\room_12</room>
+    <room>rooms\room_MageWolves</room>
   </rooms>
-  <constants number="8">
-    <constant name="enemy_spider_y_inc">150</constant>
-    <constant name="enemy_spider_x_inc">200</constant>
-    <constant name="max_fps">30</constant>
-    <constant name="enemy_hp_spider">2</constant>
-    <constant name="enemy_hp_wolf">5</constant>
-    <constant name="enemy_speed_default">2</constant>
-    <constant name="player_hp_default">10</constant>
-    <constant name="enemy_hp_skeleton_archer">3</constant>
-  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

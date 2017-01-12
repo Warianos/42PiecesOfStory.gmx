@@ -28,12 +28,12 @@
             <string>if(invincibility != true){
     if(!isBat){
         if(!obj_player.ability){
-            hp-= 1;
+            hp-= obj_player.swordNormalAttack;
         }else{
-            hp-=3;
+            hp-=obj_player.swordAbilityAttack;
         }
         sprite_index = enemyBeingAttacked;
-        
+        hp-=obj_player.swordAbilityAttack;
         if(hp &lt;= 0){
             instance_destroy();
             script_execute(EarnExp,10);
