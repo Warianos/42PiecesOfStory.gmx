@@ -52,9 +52,10 @@
   </views>
   <instances>
     <instance objName="obj_cursor" x="32" y="32" name="inst_6DEE1006" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="spr_start" x="256" y="224" name="inst_C47A8F63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="spr_quit" x="256" y="288" name="inst_DC68CD2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_title" x="256" y="96" name="inst_7A1C08FA" locked="0" code="" scaleX="0.200000002980232" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_intermedio" x="256" y="224" name="inst_42BF0EAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final" x="256" y="288" name="inst_3459D860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="spr_quit" x="256" y="352" name="inst_2C1C41E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -51,6 +51,11 @@
             <string>if(sprite_index != Arrow_ability){
     instance_destroy();
 }
+
+if(sprite_index != Arrow_stun){
+
+}
+
 </string>
           </argument>
         </arguments>

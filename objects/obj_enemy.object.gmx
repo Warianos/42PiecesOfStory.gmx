@@ -58,6 +58,12 @@ globalvar enemyBeingAttacked
           <argument>
             <kind>1</kind>
             <string>instance_create(x,y,obj_coin_drop);
+
+prob = irandom(1);
+
+if(prob &gt; 0.8){
+    instance_create(x,y,obj_heart);
+}
 </string>
           </argument>
         </arguments>
