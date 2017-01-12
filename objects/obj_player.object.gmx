@@ -30,6 +30,7 @@ roomCleared = false
 roomSuperCleared = false
 batatinhas = true
 caralho = false
+menuOpened = false
 
 //Change stance time variables
 changeWepCooldownIni = 0;
@@ -66,7 +67,7 @@ canUseBow = false;
 canUseStaff = false;
 
 //player variables
-cutScene = true;
+cutScene = false;
 flagCScene = true;
 realPlayerDirection = "down";
 playerDirection = "down";
@@ -135,7 +136,7 @@ audio_sound_gain(global.Music,0.1,0);
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>

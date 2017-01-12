@@ -187,6 +187,15 @@
           <sprite>sprites\spr_skeleton_warrior_attack_left</sprite>
         </sprites>
       </sprites>
+      <sprites name="Orb_Shield">
+        <sprite>sprites\spr_orb_full</sprite>
+        <sprite>sprites\spr_orb_weak</sprite>
+        <sprite>sprites\spr_orb_explode</sprite>
+      </sprites>
+      <sprites name="MageBoss">
+        <sprite>sprites\spr_frost_attack</sprite>
+        <sprite>sprites\spr_blizzard</sprite>
+      </sprites>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\spr_healthbar_full</sprite>
@@ -204,6 +213,9 @@
     <sprites name="Neutral">
       <sprite>sprites\spr_rock</sprite>
       <sprite>sprites\spr_fire</sprite>
+      <sprite>sprites\spr_collision_neutral</sprite>
+      <sprite>sprites\spr_warp_room</sprite>
+      <sprite>sprites\spr_mage_boss_pillar</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
@@ -260,6 +272,8 @@
     <script>scripts\Ability.gml</script>
     <script>scripts\MouseHouver.gml</script>
     <script>scripts\getTimeline.gml</script>
+    <script>scripts\MageFrostAttack.gml</script>
+    <script>scripts\MageBlizzard.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
@@ -294,6 +308,14 @@
       <object>objects\obj_enemy_skel_archer</object>
       <object>objects\obj_enemy_bat</object>
       <object>objects\obj_enemy_goblin</object>
+      <object>objects\obj_enemy_mage</object>
+      <object>objects\obj_enemy_orb_shield</object>
+      <objects name="enemy_attacks">
+        <object>objects\obj_enemyToPlayer_hit</object>
+        <object>objects\obj_enemy_arrow</object>
+        <object>objects\obj_frost_attack</object>
+        <object>objects\obj_blizzard</object>
+      </objects>
     </objects>
     <object>objects\obj_enemy_spawner</object>
     <object>objects\obj_rock</object>
@@ -305,14 +327,15 @@
     <object>objects\obj_sword_hit</object>
     <object>objects\obj_spawner_room2</object>
     <object>objects\obj_coin_drop</object>
-    <object>objects\obj_enemy_arrow</object>
     <object>objects\obj_collision_neutral</object>
     <object>objects\obj_collision_player</object>
-    <object>objects\object20</object>
     <object>objects\obj_log</object>
     <object>objects\obj_cry_girl</object>
     <object>objects\obj_fire</object>
     <object>objects\obj_cat</object>
+    <objects name="neutral">
+      <object>objects\obj_pillar</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
@@ -323,8 +346,11 @@
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\main_menu</room>
+    <room>rooms\room_MageFinal</room>
+    <room>rooms\room_MageWolves</room>
+    <room>rooms\room_MageShields</room>
     <room>rooms\room0</room>
+    <room>rooms\main_menu</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
     <room>rooms\room1</room>
