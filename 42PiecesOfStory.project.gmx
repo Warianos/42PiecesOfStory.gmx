@@ -256,6 +256,7 @@
       <sprite>sprites\spr_option_continue</sprite>
       <sprite>sprites\spr_option_final</sprite>
     </sprites>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -274,6 +275,9 @@
     <background>background\background13</background>
     <background>background\icon</background>
     <background>background\game_over</background>
+    <background>background\background16</background>
+    <background>background\background17</background>
+    <background>background\background18</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -371,6 +375,12 @@
       <object>objects\obj_ice_block_unmovable</object>
       <object>objects\obj_heart</object>
     </objects>
+    <object>objects\object20</object>
+    <object>objects\obj_log</object>
+    <object>objects\obj_cry_girl</object>
+    <object>objects\obj_fire</object>
+    <object>objects\obj_cat</object>
+    <object>objects\obj_wall</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
@@ -384,12 +394,24 @@
     <room>rooms\room_1</room>
     <room>rooms\main_menu</room>
     <room>rooms\room0</room>
-    <room>rooms\room_2</room>
-    <room>rooms\room1</room>
     <room>rooms\rm_game_over</room>
-    <room>rooms\room_5</room>
+    <room>rooms\room_1</room>
+    <room>rooms\room_2</room>
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
+    <room>rooms\room_5</room>
+    <room>rooms\room_6</room>
+    <room>rooms\room_7</room>
+    <room>rooms\room_8</room>
+    <room>rooms\room_9</room>
+    <room>rooms\room_10</room>
+    <room>rooms\room_11</room>
+    <room>rooms\room_12</room>
+    <room>rooms\room_MageWolves</room>
+    <room>rooms\room_MageShields</room>
+    <room>rooms\room_MageFinal</room>
+    <room>rooms\room1</room>
+    <room>rooms\room0</room>
   </rooms>
   <constants number="10">
     <constant name="enemy_spider_y_inc">150</constant>
