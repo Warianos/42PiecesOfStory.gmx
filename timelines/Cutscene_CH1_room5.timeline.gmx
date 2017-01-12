@@ -73,7 +73,7 @@ with (obj_cry_girl)
 
 
 with(obj_cry_girl){
- script_execute(DrawText,"SIR! PLEASE HELP ME!",1,x,y,150);
+ script_execute(DrawText,""+name+"SIR! PLEASE HELP ME!",2,x,y,150,color);
    with(txt){
     depth = -1000;
    }
@@ -112,7 +112,7 @@ with(txt){instance_destroy();}
 with (obj_enemy_goblin)
    {
    sprite_index = asset_get_index("spr_goblin_idle_right");
-   script_execute(DrawText,"IF YOU DO NOT SHUT UP#I WILL EAT YOU#RIGHT HERE RIGHT NOW!",1,x,y,150);
+   script_execute(DrawText,""+name+"IF YOU DO NOT SHUT UP#I WILL EAT YOU#RIGHT HERE RIGHT NOW!",2,x,y,150,color);
    with(txt){
     depth = -1000;
    }
@@ -348,7 +348,7 @@ with (obj_enemy_goblin)
    {
    with(txt){instance_destroy();}
    sprite_index = asset_get_index("spr_goblin_idle_left");
-   script_execute(DrawText,"YOU SHOULD NOT COME HERE BOY#MAMA IS GOING TO BE SO HAPPY#IF I BRING 2 KIDS INSTEAD OF 1#MUHAHAHAHAHAHAHAHAHA",1,x,y,150);
+   script_execute(DrawText,""+name+"YOU SHOULD NOT COME HERE BOY#MAMA IS GOING TO BE SO HAPPY#IF I BRING 2 KIDS INSTEAD OF 1#MUHAHAHAHAHAHAHAHAHA",2,x,y,150,color);
    with(txt){
     depth = -1000;
    }

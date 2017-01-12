@@ -14,6 +14,7 @@ with(txt){
     maxLenght = view_wview[0];
     text = argument0;
     spd = argument1;
+    color = argument5;
     font = fnt_text;
     translateY = argument4;
     

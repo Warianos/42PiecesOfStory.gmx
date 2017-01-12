@@ -35,6 +35,9 @@ state = enemy_state.stop
 invincibility = false
 enemyBeingAttacked = spr_skel_war_left_hit
 isBat = false
+name = "BadGoblin#___________#"
+color = c_red;
+txt="";
 </string>
           </argument>
         </arguments>
