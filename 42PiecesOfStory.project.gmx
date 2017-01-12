@@ -374,13 +374,9 @@
       <object>objects\obj_debugger</object>
       <object>objects\obj_ice_block_unmovable</object>
       <object>objects\obj_heart</object>
+      <object>objects\obj_wall</object>
     </objects>
     <object>objects\object20</object>
-    <object>objects\obj_log</object>
-    <object>objects\obj_cry_girl</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_cat</object>
-    <object>objects\obj_wall</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
@@ -391,8 +387,8 @@
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room_1</room>
     <room>rooms\main_menu</room>
+    <room>rooms\room_1</room>
     <room>rooms\room0</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\room_1</room>
@@ -411,7 +407,6 @@
     <room>rooms\room_MageShields</room>
     <room>rooms\room_MageFinal</room>
     <room>rooms\room1</room>
-    <room>rooms\room0</room>
   </rooms>
   <constants number="10">
     <constant name="enemy_spider_y_inc">150</constant>
