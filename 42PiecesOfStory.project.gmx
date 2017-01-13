@@ -98,6 +98,11 @@
       <sprites name="Wolf">
         <sprite>sprites\spr_wolf</sprite>
         <sprite>sprites\spr_wolf_hit</sprite>
+        <sprite>sprites\spr_wolf_attack_right</sprite>
+        <sprite>sprites\spr_wolf_attack_left</sprite>
+        <sprite>sprites\spr_wolf_walk_right</sprite>
+        <sprite>sprites\spr_wolf_walk_left</sprite>
+        <sprite>sprites\sprite175</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider</sprite>
@@ -199,6 +204,14 @@
       <sprites name="MageBoss">
         <sprite>sprites\spr_frost_attack</sprite>
         <sprite>sprites\spr_blizzard</sprite>
+        <sprite>sprites\spr_mage_default_right</sprite>
+        <sprite>sprites\spr_mage_default_left</sprite>
+        <sprite>sprites\spr_mage_blizzard_right</sprite>
+        <sprite>sprites\spr_mage_blizzard_left</sprite>
+        <sprite>sprites\spr_mage_frost_attack_right</sprite>
+        <sprite>sprites\spr_mage_frost_attack_left</sprite>
+        <sprite>sprites\spr_mage_die_right</sprite>
+        <sprite>sprites\spr_mage_die_left</sprite>
       </sprites>
     </sprites>
     <sprites name="Interface">
@@ -223,6 +236,7 @@
       <sprite>sprites\spr_ice_block</sprite>
       <sprite>sprites\spr_ice_block_unmovable</sprite>
       <sprite>sprites\spr_heart</sprite>
+      <sprite>sprites\spr_gate</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
     <sprite>sprites\sprite54</sprite>
@@ -391,6 +405,7 @@
     </objects>
     <object>objects\obj_target</object>
     <object>objects\obj_warp_room01</object>
+    <object>objects\obj_warp_gate</object>
     <object>objects\obj_weapon</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_arrow</object>
@@ -464,6 +479,8 @@
     <room>rooms\room_11</room>
     <room>rooms\room_12</room>
     <room>rooms\room_MageWolves</room>
+    <room>rooms\room_MageShields</room>
+    <room>rooms\room_MageFinal</room>
   </rooms>
   <constants number="8">
     <constant name="enemy_spider_y_inc">150</constant>
