@@ -1,0 +1,8 @@
+enemy_spider_y_inc=150
+enemy_spider_x_inc=200
+max_fps=30
+enemy_hp_spider=2
+enemy_hp_wolf=5
+enemy_speed_default=2
+player_hp_default=10
+enemy_hp_skeleton_archer=3

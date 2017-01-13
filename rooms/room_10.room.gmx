@@ -53,6 +53,8 @@
   <instances>
     <instance objName="obj_collision_player" x="0" y="-64" name="inst_A9049A2C" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="0" y="512" name="inst_F18BC9CD" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ice_wall" x="448" y="0" name="inst_1DC63751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ice_wall" x="448" y="256" name="inst_F04115F8" locked="0" code="" scaleX="1" scaleY="0.875" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background17" x="96" y="224" w="32" h="32" xo="512" yo="480" id="10004019" name="inst_1D87CA62" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

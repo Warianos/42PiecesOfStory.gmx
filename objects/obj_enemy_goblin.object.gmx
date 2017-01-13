@@ -36,6 +36,9 @@ invincibility = false
 enemyBeingAttacked = spr_skel_war_left_hit
 isBat = false
 name = "BadGoblin#___________#"
+
+nameGood = "GoodGobline#_____________#"
+
 color = c_red;
 txt="";
 </string>

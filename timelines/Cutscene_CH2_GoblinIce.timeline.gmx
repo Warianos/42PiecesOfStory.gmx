@@ -19,6 +19,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
+
             <string>instance_create(300,300,obj_enemy_goblin);
 
 with(obj_enemy_goblin){
@@ -28,6 +29,17 @@ with(obj_enemy_goblin){
        
 
 }
+
+
+            <string>
+
+with(obj_enemy_goblin){
+    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+    image_speed *= 3;  
+}
+
+
+
 
 </string>
           </argument>
@@ -56,8 +68,14 @@ with(obj_enemy_goblin){
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
     vspeed -=4
+
     sprite_index = asset_get_index("spr_goblin_walk_animation_up");
     image_speed *= 3;  
+
+     
+    sprite_index = asset_get_index("spr_goblin_walk_animation_up");
+    //image_speed *= 3;  
+
        
 
 }
@@ -88,8 +106,14 @@ with(obj_enemy_goblin){
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
     vspeed = 0;
+
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
     image_speed *= 3;  
+
+    
+    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+    //image_speed *= 3;  
+
        
 
 }
@@ -121,7 +145,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed -=4
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;  
+
+    //image_speed *= 3;  
+
        
 
 }
@@ -153,7 +181,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed -=2
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;  
+
+    //image_speed *= 3;  
+
        
 
 }
@@ -185,7 +217,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed = 0
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;  
+
+    //image_speed *= 3;  
+
        
 
 }
@@ -217,7 +253,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed +=2
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;  
+
+    //image_speed *= 3;  
+
        
 
 }
@@ -281,7 +321,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed = 0
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;   
+
+    //image_speed *= 3;   
+
        
 
 }
@@ -313,7 +357,11 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed += 8;
     sprite_index = asset_get_index("spr_goblin_walk_animation_down");
+
     image_speed *= 3;   
+
+    //image_speed *= 3;   
+
        
 
 }
@@ -345,10 +393,22 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     vspeed = 0;
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
+
     image_speed *= 3;   
        
 
 }
+
+    image_speed /= 3;   
+    sprite_index = asset_get_index("spr_goblin_idle_left");
+
+}
+
+with(obj_player){cutScene = false;}
+
+script_execute(getTimeline,Cutscene_CH2_GoblinThanks,false);
+
+
 </string>
           </argument>
         </arguments>
