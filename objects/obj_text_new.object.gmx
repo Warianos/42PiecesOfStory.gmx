@@ -89,11 +89,11 @@ if(alpha &lt; 1) alpha += spd/10; else alpha = 1;
 
 
 draw_set_font(font);
-draw_set_color(color);
+draw_set_color(c_gray);
 draw_triangle(triX1,triY1,triX2,triY2,triX3,triY3,0);
 //draw_set_color(c_black);
 //draw_triangle(x-15,y-translateY+boxheight,x+15,y-translateY+boxheight,x,y-translateY+boxheight+40,1);
-draw_set_color(color);
+draw_set_color(c_gray);
 draw_rectangle(rectX1,rectY1,rectX2,rectY2,0);
 //ddraw_set_color(c_black);
 //draw_rectangle(x-boxwidth/2,y-translateY,x+boxwidth/2,y-translateY+boxheight,1);

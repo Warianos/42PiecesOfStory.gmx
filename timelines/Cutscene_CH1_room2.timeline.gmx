@@ -23,7 +23,7 @@
     cutScene = true;
     sprite_index = asset_get_index("spr_idle_sword_right");
     
-    script_execute(DrawText,"Hey...",0.5,x,y,150);
+    script_execute(DrawText,""+desc+"Hey...",1,x,y,150,c_silver);
     with(txt){depth = -1000;}
        
 
@@ -348,7 +348,7 @@
             <string>with(obj_player){
     sprite_index = asset_get_index("spr_idle_sword_right");
     with(txt){instance_destroy();}
-    script_execute(DrawText,"...",0.8,x,y,150);
+    script_execute(DrawText,""+name+"...",1.6,x,y,150,color);
     with(txt){depth = -1000;}
 }
 </string>
@@ -378,7 +378,7 @@
             <kind>1</kind>
             <string>with(obj_player){
     with(txt){instance_destroy();}
-    script_execute(DrawText,"Yes!, it is me, your sword",0.8,x,y,150);
+    script_execute(DrawText,""+desc+"Yes!, it is me, your sword",1.6,x,y,150,c_silver);
     with(txt){depth = -1000;}
     
 }
@@ -409,7 +409,7 @@
             <kind>1</kind>
             <string>with(obj_player){
 with(txt){instance_destroy();}
-script_execute(DrawText,"Down here!, in your right hand!",1,x,y,150);
+script_execute(DrawText,""+nameSword+"Down here!, in your right hand!",2,x,y,150,c_silver);
 with(txt){depth = -1000;}
 }
 </string>
@@ -439,7 +439,7 @@ with(txt){depth = -1000;}
             <kind>1</kind>
             <string>with(obj_player){
 with(txt){instance_destroy();}
-script_execute(DrawText,"Yes, im a talking sword#i can also shapeshift into other weapons#such as bows for example#Try using you R key!",1,x,y,150);
+script_execute(DrawText,""+nameSword+"Yes, im a talking sword#I can also shapeshift into other weapons#such as bows for example#Try using you R key!",2,x,y,150,c_silver);
 with(txt){depth = -1000;}
 }
 </string>

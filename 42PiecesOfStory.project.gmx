@@ -264,7 +264,11 @@
     <script>scripts\Ability.gml</script>
     <script>scripts\MouseHouver.gml</script>
     <script>scripts\getTimeline.gml</script>
+    <script>scripts\FastText.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\GrayScale.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
     <font>fonts\fnt_text</font>
@@ -318,13 +322,18 @@
     <object>objects\obj_fire</object>
     <object>objects\obj_cat</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_text_new</object>
+    <object>objects\shr_Controler</object>
   </objects>
   <timelines name="timelines">
+    <timeline>timelines\Cutscene_CH2_GoblinIce</timeline>
+    <timeline>timelines\Cutscene_CH2_SwordTalk</timeline>
+    <timeline>timelines\Cutscene_CH2_wakeUp</timeline>
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
-    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
     <timeline>timelines\Cutscene_CH1_room2</timeline>
     <timeline>timelines\Cutscene_CH1_room5</timeline>
     <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
+    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
