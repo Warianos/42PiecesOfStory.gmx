@@ -269,6 +269,9 @@
       <sprite>sprites\spr_option_final</sprite>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\sprite169</sprite>
+    <sprite>sprites\spr_ice_wall</sprite>
+    <sprite>sprites\spr_cave_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -398,6 +401,7 @@
       <object>objects\obj_fire</object>
       <object>objects\obj_log</object>
       <object>objects\obj_collision_neutral</object>
+      <object>objects\obj_collision_mage_boss</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_debugger</object>
       <object>objects\obj_ice_block_unmovable</object>
@@ -412,6 +416,8 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_text_new</object>
     <object>objects\shr_Controler</object>
+    <object>objects\obj_ice_wall</object>
+    <object>objects\obj_cave_wall</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Cutscene_CH2_GoblinIce</timeline>
@@ -425,6 +431,7 @@
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_6</room>
     <room>rooms\main_menu</room>
     <room>rooms\room0</room>
     <room>rooms\rm_game_over</room>
@@ -433,7 +440,6 @@
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
     <room>rooms\room_5</room>
-    <room>rooms\room_6</room>
     <room>rooms\room_7</room>
     <room>rooms\room_8</room>
     <room>rooms\room_9</room>
@@ -442,6 +448,16 @@
     <room>rooms\room_12</room>
     <room>rooms\room_MageWolves</room>
   </rooms>
+  <constants number="8">
+    <constant name="enemy_spider_y_inc">150</constant>
+    <constant name="enemy_spider_x_inc">200</constant>
+    <constant name="max_fps">30</constant>
+    <constant name="enemy_hp_spider">2</constant>
+    <constant name="enemy_hp_wolf">5</constant>
+    <constant name="enemy_speed_default">2</constant>
+    <constant name="player_hp_default">10</constant>
+    <constant name="enemy_hp_skeleton_archer">3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
