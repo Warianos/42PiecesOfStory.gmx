@@ -28,6 +28,8 @@
             <string>/*var targetRoom, targetX, targetY, areaUnlocked;*/
 image_speed = 0
 areaUnlocked = false
+
+
 </string>
           </argument>
         </arguments>
