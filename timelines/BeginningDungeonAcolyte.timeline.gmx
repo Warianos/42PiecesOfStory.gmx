@@ -20,10 +20,13 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-cutScene = true; 
-    sprite_index = asset_get_index("spr_idle_" + string(stance) + "_right");
-    script_execute(DrawText,""+nameSword+"Thank you for playing our demo#If you want to know what happened to the cat#Come play with me next assigment :)",0.7,x,y,150,c_silver);
-}
+cutScene = true;
+script_execute(DrawText,""+nameSword+"Beware!, i sense an evil aura",1,x,y-150,obj_text,c_silver);
+
+ with(txt){
+   depth = -1001;
+   }
+ }
 </string>
           </argument>
         </arguments>
@@ -31,7 +34,7 @@ cutScene = true;
     </event>
   </entry>
   <entry>
-    <step>300</step>
+    <step>120</step>
     <event>
       <action>
         <libid>1</libid>
@@ -50,11 +53,12 @@ cutScene = true;
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    with(txt){instance_destroy();}
-    cutScene = false; 
-    }
-    
-game_restart();
+cutScene = false;
+
+ with(txt){
+   instance_destroy();
+   }
+ }
 </string>
           </argument>
         </arguments>

@@ -423,6 +423,8 @@
     <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
     <timeline>timelines\Cutscene_CH1_Sleep</timeline>
     <timeline>timelines\FinalDemo</timeline>
+    <timeline>timelines\Cutscene_CH2_GoblinThanks</timeline>
+    <timeline>timelines\BeginningDungeonAcolyte</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_6</room>

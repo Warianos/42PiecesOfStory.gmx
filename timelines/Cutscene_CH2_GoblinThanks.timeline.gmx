@@ -20,176 +20,19 @@
           <argument>
             <kind>1</kind>
             <string>
+//timeline_running = false;
+
+with(obj_player){
+    cutScene = true;
+   
+}
 
 with(obj_enemy_goblin){
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    image_speed *= 3;  
+show_debug_message("entreiiiiiiiiiiiiiiii");
+    sprite_index = asset_get_index("spr_goblin_idle_left");
+   
 }
 
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>15</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_enemy_goblin){
-    vspeed -=4
-     
-    sprite_index = asset_get_index("spr_goblin_walk_animation_up");
-    //image_speed *= 3;  
-       
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>30</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_enemy_goblin){
-    vspeed = 0;
-    
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;  
-       
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>35</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_enemy_goblin){
-    vspeed -=4
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;  
-       
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>40</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_enemy_goblin){
-    vspeed -=2
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;  
-       
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-  </entry>
-  <entry>
-    <step>45</step>
-    <event>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>with(obj_enemy_goblin){
-    vspeed = 0
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;  
-       
-
-}
 </string>
           </argument>
         </arguments>
@@ -216,12 +59,16 @@ with(obj_enemy_goblin){
           <argument>
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
-    vspeed +=2
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;  
-       
 
+    //sprite_index = asset_get_index("spr_goblin_idle_Left");
+    script_execute(DrawText,""+nameGood+"You saved me!",2,x-40,y-150,obj_text,color);
+
+ with(txt){
+   depth = -1001;
+   }
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -229,7 +76,7 @@ with(obj_enemy_goblin){
     </event>
   </entry>
   <entry>
-    <step>55</step>
+    <step>100</step>
     <event>
       <action>
         <libid>1</libid>
@@ -248,11 +95,13 @@ with(obj_enemy_goblin){
           <argument>
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
-    vspeed += 2
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed =  animationSpeed/5 * -1; 
-       
+with(txt){instance_destroy();}
+    //sprite_index = asset_get_index("spr_goblin_idle_Left");
+    script_execute(DrawText,""+nameGood+"Thank you bro!",2,x-40,y-150,obj_text,color);
 
+ with(txt){
+   depth = -1001;
+   }
 }
 </string>
           </argument>
@@ -261,7 +110,7 @@ with(obj_enemy_goblin){
     </event>
   </entry>
   <entry>
-    <step>60</step>
+    <step>150</step>
     <event>
       <action>
         <libid>1</libid>
@@ -280,11 +129,13 @@ with(obj_enemy_goblin){
           <argument>
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
-    vspeed = 0
-    sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    //image_speed *= 3;   
-       
+with(txt){instance_destroy();}
+    //sprite_index = asset_get_index("spr_goblin_idle_Left");
+    script_execute(DrawText,""+nameGood+"While walking around#i found this",2,x-40,y-150,obj_text,color);
 
+ with(txt){
+   depth = -1001;
+   }
 }
 </string>
           </argument>
@@ -293,7 +144,7 @@ with(obj_enemy_goblin){
     </event>
   </entry>
   <entry>
-    <step>65</step>
+    <step>200</step>
     <event>
       <action>
         <libid>1</libid>
@@ -312,12 +163,21 @@ with(obj_enemy_goblin){
           <argument>
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
-    vspeed += 8;
-    sprite_index = asset_get_index("spr_goblin_walk_animation_down");
-    //image_speed *= 3;   
-       
+with(txt){instance_destroy();}
+    //sprite_index = asset_get_index("spr_goblin_idle_Left");
+    script_execute(DrawText,""+nameGood+"Take it!!",2,x-40,y-150,obj_text,color);
+    instance_create(room_width/2+30,room_height/2,obj_coin_drop);
+    instance_create(room_width/2-30,room_height/2,obj_coin_drop);
+    instance_create(room_width/2,room_height/2+30,obj_coin_drop);
+    instance_create(room_width/2,room_height/2-30,obj_coin_drop);
+    instance_create(room_width/2,room_height/2,obj_coin_drop);
 
+ with(txt){
+   depth = -1001;
+   }
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -325,7 +185,7 @@ with(obj_enemy_goblin){
     </event>
   </entry>
   <entry>
-    <step>75</step>
+    <step>250</step>
     <event>
       <action>
         <libid>1</libid>
@@ -344,17 +204,58 @@ with(obj_enemy_goblin){
           <argument>
             <kind>1</kind>
             <string>with(obj_enemy_goblin){
-    vspeed = 0;
+with(txt){instance_destroy();}
     sprite_index = asset_get_index("spr_goblin_walk_animation_right");
-    image_speed /= 3;   
-    sprite_index = asset_get_index("spr_goblin_idle_left");
+    image_speed *=3;
+    hspeed = 4
+    script_execute(DrawText,""+nameGood+"c ya bro!",2,x-40,y-150,obj_text,color);
 
+ with(txt){
+   depth = -1001;
+   }
 }
 
-with(obj_player){cutScene = false;}
 
-script_execute(getTimeline,Cutscene_CH2_GoblinThanks,false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>300</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(obj_enemy_goblin){
+with(txt){instance_destroy();}
+instance_destroy();
+    
+}
 
+
+with(obj_player){
+
+cutScene = false;
+
+
+
+
+}
 </string>
           </argument>
         </arguments>

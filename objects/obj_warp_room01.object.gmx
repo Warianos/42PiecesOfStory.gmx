@@ -58,6 +58,8 @@ if(areaUnlocked){
     obj_player.x = targetX;
     obj_player.y = targetY;
 }
+obj_player.flag = true;
+if(targetRoom == room_8)obj_player.cutScene = true;
 </string>
           </argument>
         </arguments>

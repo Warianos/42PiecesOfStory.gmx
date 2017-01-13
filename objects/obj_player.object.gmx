@@ -162,7 +162,7 @@ pointsToAdd = 2
         <arguments>
           <argument>
             <kind>14</kind>
-            <timeline>Cutscene_CH2_wakeUp</timeline>
+            <timeline>BeginningDungeonAcolyte</timeline>
           </argument>
           <argument>
             <kind>0</kind>
@@ -328,9 +328,16 @@ if(room == 6 &amp;&amp; batatinhas){
 }
 
 //Rooms bem feitas
-show_debug_message(room);
-if(room == 8 &amp;&amp; flag){
-    script_execute(getTimeline,Cutscene_CH2_wakeUp,false)
+show_debug_message(flag);
+show_debug_message(cutScene);
+if(room == 0 &amp;&amp; flag){
+    script_execute(getTimeline,BeginningDungeonAcolyte,false)
+    flag = false;
+}
+
+
+if(room == 10 &amp;&amp; flag){
+    script_execute(getTimeline,Cutscene_CH2_GoblinIce,true)
     flag = false;
 }
 

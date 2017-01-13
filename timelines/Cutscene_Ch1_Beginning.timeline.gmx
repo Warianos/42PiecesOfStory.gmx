@@ -40,7 +40,7 @@ with (obj_cry_girl)
    
    
 with(obj_player){
-    
+    cutScene = true; 
     sprite_index = asset_get_index("spr_die");
     image_speed =  animationSpeed/5 * -1; 
        
