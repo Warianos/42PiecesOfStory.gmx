@@ -62,7 +62,7 @@ globalvar enemyBeingAttacked
 prob = irandom(1);
 
 if(prob &gt; 0.8){
-    instance_create(x,y,obj_heart);
+    instance_create(x+10,y+10,obj_heart);
 }
 </string>
           </argument>

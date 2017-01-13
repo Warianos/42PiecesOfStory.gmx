@@ -210,6 +210,7 @@
       <sprite>sprites\spr_fire</sprite>
       <sprite>sprites\spr_ice_block</sprite>
       <sprite>sprites\spr_ice_block_unmovable</sprite>
+      <sprite>sprites\spr_ice_target</sprite>
       <sprite>sprites\spr_heart</sprite>
     </sprites>
     <sprite>sprites\spr_levelUp</sprite>
@@ -321,6 +322,21 @@
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_player_shield</object>
+    <objects name="Neutral">
+      <object>objects\obj_cry_girl</object>
+      <object>objects\obj_ice_block</object>
+      <object>objects\obj_cat</object>
+      <object>objects\obj_fire</object>
+      <object>objects\obj_log</object>
+      <object>objects\obj_collision_neutral</object>
+      <object>objects\obj_rock</object>
+      <object>objects\obj_debugger</object>
+      <object>objects\obj_ice_block_unmovable</object>
+      <object>objects\obj_heart</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_ice_target</object>
+      <object>objects\obj_block</object>
+    </objects>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
       <object>objects\obj_coin_count</object>
@@ -363,19 +379,6 @@
     <object>objects\obj_coin_drop</object>
     <object>objects\obj_enemy_arrow</object>
     <object>objects\obj_collision_player</object>
-    <objects name="Neutral">
-      <object>objects\obj_cry_girl</object>
-      <object>objects\obj_ice_block</object>
-      <object>objects\obj_cat</object>
-      <object>objects\obj_fire</object>
-      <object>objects\obj_log</object>
-      <object>objects\obj_collision_neutral</object>
-      <object>objects\obj_rock</object>
-      <object>objects\obj_debugger</object>
-      <object>objects\obj_ice_block_unmovable</object>
-      <object>objects\obj_heart</object>
-      <object>objects\obj_wall</object>
-    </objects>
     <object>objects\object20</object>
   </objects>
   <timelines name="timelines">
@@ -387,11 +390,11 @@
     <timeline>timelines\FinalDemo</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\main_menu</room>
     <room>rooms\room_1</room>
+    <room>rooms\main_menu</room>
+    <room>rooms\room_1_1</room>
     <room>rooms\room0</room>
     <room>rooms\rm_game_over</room>
-    <room>rooms\room_1</room>
     <room>rooms\room_2</room>
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>

@@ -62,8 +62,8 @@ stances[0]   = "sword";
 stances[1]   = "curvebow";
 stances[2]   = "wand";
 stance       = stances[0]
-canUseBow    = true;
-canUseStaff  = true;
+canUseBow    = false;
+canUseStaff  = false;
 
 //player variables
 cutScene            = false;
@@ -84,7 +84,7 @@ hp                  = player_hp_default;
 invincibility       = false;
 attacking           = false;
 hidden              = false;
-coins               = 100;
+coins               = 0;
 coin_caught         = false;
 
 //attacking
@@ -97,7 +97,9 @@ abilityAgil        = false;
 abilityInt         = false;
 swordHold          = 0;
 holding            = false;
-canUseAbility      = true;
+canUseAbility      = false;
+canUseAbilityAgil  = false;
+canUseAbilityInt   = false;
 swordNormalAttack  = 1;
 swordAbilityAttack = 3;
 
@@ -130,7 +132,7 @@ movementSpeedUp = false;
 powerUpOn       = false;
 attackSpeedUp   = false; 
 
-pointsToAdd = 2
+pointsToAdd = 0
 
 
 
@@ -209,6 +211,54 @@ pointsToAdd = 2
           <argument>
             <kind>1</kind>
             <string>invincibility = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = 0
+vspeed = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attacking = false;
+abilityInt = false;
 </string>
           </argument>
         </arguments>
@@ -363,11 +413,15 @@ if(!menuOpened){
         if(dodgeTime &gt;= dodgeCooldownFin){
             dodgeCooldownIni = dodgeTime;
             dodgeCooldownFin = dodgeTime + dodgeCooldown;
-            script_execute(Dodge,obj_player,realPlayerDirection,100)
+            script_execute(Dodge,realPlayerDirection,room_speed-10)
             dodge = false;
         }
     }
     
+    //set speed to 0
+    if(alarm[3]==-1){
+        alarm[3] = 2
+    }
     //clicar tecla para mudar de stance
     if(keyboard_check(ord("R"))){
         //script_execute(getTimeline,Cutscene_CH1_room5_cat,false);
@@ -404,7 +458,6 @@ if(!menuOpened){
         if(place_meeting(x,y,obj_rock)){
             obj_player.hidden=true;
             obj_enemy_wolf.state=enemy_state.stop;
-           
         }
         else {
             obj_player.hidden=false;
@@ -511,16 +564,21 @@ swordHold = 0;
           <argument>
             <kind>1</kind>
             <string>
-if(attacking &amp;&amp; !abilityAgil){
+if(attacking &amp;&amp; !abilityAgil &amp;&amp; !abilityInt){
     attacking = false;
     ability = false;
     numbArrows = 0;
     numbFireballs = 0;
 
 }
-//stop special attacks
+//stop special attacks agility
 if(attacking &amp;&amp; abilityAgil &amp;&amp; alarm[1] = -1){
     alarm[1] = 10
+}
+
+//stop special attacks intelligence
+if(attacking &amp;&amp; abilityInt &amp;&amp; alarm[2] = -1){
+    alarm[2] = 10
 }
 </string>
           </argument>
@@ -681,7 +739,7 @@ script_execute(setMainMenu,menuOpened);
             specialAttackCooldownIni = specialAttackTime;
             specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
                 
-            if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW) &amp;&amp; canUseAbility){
+            if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW) &amp;&amp; canUseAbilityInt){
                 abilityInt = true;
                 attacking = true;
             }
@@ -757,7 +815,7 @@ script_execute(setMainMenu,menuOpened);
             specialAttackCooldownIni = specialAttackTime;
             specialAttackCooldownFin = specialAttackTime + specialAttackCooldown;
                 
-            if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW) &amp;&amp; canUseAbility){
+            if (!(keyA &amp;&amp; keyS) &amp;&amp; !(keyA &amp;&amp; keyW) &amp;&amp; !(keyD &amp;&amp; keyS) &amp;&amp; !(keyD &amp;&amp; keyW) &amp;&amp; canUseAbilityAgil){
                 abilityAgil = true;
                 attacking = true;
             }

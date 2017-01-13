@@ -15,6 +15,7 @@ while(obj_player.actualExp >= obj_player.expMax){
         image_speed = 0.4;
         
     }
+    obj_player.poinstToAdd += 2
     
 }
 
