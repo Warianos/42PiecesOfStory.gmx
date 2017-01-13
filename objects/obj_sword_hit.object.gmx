@@ -28,19 +28,19 @@
             <string>if(invincibility != true){
     if(!isBat){
         if(!obj_player.ability){
-            hp-= 1;
+            hp-= obj_player.swordNormalAttack;
         }else{
-            hp-=3;
+            hp-=obj_player.swordAbilityAttack;
         }
-        
         sprite_index = enemyBeingAttacked;
-        hp-= 1;
+        hp-=obj_player.swordAbilityAttack;
         if(hp &lt;= 0){
             instance_destroy();
             script_execute(EarnExp,10);
         }
         invincibility = true;
         alarm[0] = max_fps/2;
+        show_debug_message(string(hp))
     } 
 }
 </string>
