@@ -20,8 +20,9 @@
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
+cutScene = true; 
     sprite_index = asset_get_index("spr_idle_" + string(stance) + "_right");
-    script_execute(DrawText,"Thank you for playing our demo#If you want to know what happened to the cat#Come play with me next assigment :)",0.7,x,y,150);
+    script_execute(DrawText,""+nameSword+"Thank you for playing our demo#If you want to know what happened to the cat#Come play with me next assigment :)",0.7,x,y,150,c_silver);
 }
 </string>
           </argument>
@@ -50,7 +51,7 @@
             <kind>1</kind>
             <string>with(obj_player){
     with(txt){instance_destroy();}
-    
+    cutScene = false; 
     }
     
 game_restart();

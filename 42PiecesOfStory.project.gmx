@@ -283,6 +283,9 @@
       <sprite>sprites\spr_option_final</sprite>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\sprite169</sprite>
+    <sprite>sprites\spr_ice_wall</sprite>
+    <sprite>sprites\spr_cave_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grass1</background>
@@ -319,6 +322,7 @@
     <script>scripts\Ability.gml</script>
     <script>scripts\MouseHouver.gml</script>
     <script>scripts\getTimeline.gml</script>
+    <script>scripts\FastText.gml</script>
     <script>scripts\MageFrostAttack.gml</script>
     <script>scripts\MageBlizzard.gml</script>
     <script>scripts\setSubMenu.gml</script>
@@ -331,6 +335,9 @@
     <script>scripts\moveBlock.gml</script>
     <script>scripts\checkBlocks.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\GrayScale.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\fnt_debugger</font>
     <font>fonts\fnt_text</font>
@@ -409,24 +416,33 @@
       <object>objects\obj_fire</object>
       <object>objects\obj_log</object>
       <object>objects\obj_collision_neutral</object>
+      <object>objects\obj_collision_mage_boss</object>
       <object>objects\obj_rock</object>
       <object>objects\obj_debugger</object>
       <object>objects\obj_ice_block_unmovable</object>
       <object>objects\obj_heart</object>
       <object>objects\obj_wall</object>
     </objects>
-    <object>objects\object20</object>
+    <object>objects\obj_text_new</object>
+    <object>objects\shr_Controler</object>
+    <object>objects\obj_ice_wall</object>
+    <object>objects\obj_cave_wall</object>
   </objects>
   <timelines name="timelines">
+    <timeline>timelines\Cutscene_CH2_GoblinIce</timeline>
+    <timeline>timelines\Cutscene_CH2_SwordTalk</timeline>
+    <timeline>timelines\Cutscene_CH2_wakeUp</timeline>
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
-    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
     <timeline>timelines\Cutscene_CH1_room2</timeline>
     <timeline>timelines\Cutscene_CH1_room5</timeline>
     <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
+    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
     <timeline>timelines\FinalDemo</timeline>
+    <timeline>timelines\Cutscene_CH2_GoblinThanks</timeline>
+    <timeline>timelines\BeginningDungeonAcolyte</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room_MageWolves</room>
+    <room>rooms\room_6</room>
     <room>rooms\main_menu</room>
     <room>rooms\room0</room>
     <room>rooms\rm_game_over</room>
@@ -435,13 +451,13 @@
     <room>rooms\room_3</room>
     <room>rooms\room_4</room>
     <room>rooms\room_5</room>
-    <room>rooms\room_6</room>
     <room>rooms\room_7</room>
     <room>rooms\room_8</room>
     <room>rooms\room_9</room>
     <room>rooms\room_10</room>
     <room>rooms\room_11</room>
     <room>rooms\room_12</room>
+    <room>rooms\room_MageWolves</room>
     <room>rooms\room_MageShields</room>
     <room>rooms\room_MageFinal</room>
   </rooms>

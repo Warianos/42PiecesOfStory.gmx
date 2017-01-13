@@ -25,12 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global variable 
+            <string>name = "Cagatacos#___________#"
+nameSword = "Cometacos#___________#"
+desc = "????#______#"
+color = c_green;
+txt="";
+
+//global variable 
 roomCleared      = false
 roomSuperCleared = false
-batatinhas = true
+batatinhas = true;
+flag = true;
 caralho = false
 menuOpened = false
+
 //Change stance time variables
 changeWepCooldownIni = 0;
 changeWepCooldownFin = 0;
@@ -154,7 +162,7 @@ pointsToAdd = 2
         <arguments>
           <argument>
             <kind>14</kind>
-            <timeline>Cutscene_CH1_Sleep</timeline>
+            <timeline>BeginningDungeonAcolyte</timeline>
           </argument>
           <argument>
             <kind>0</kind>
@@ -285,77 +293,96 @@ invincibility = false;
             <string>
 if(!menuOpened){
 
-    //player´s movement
-    if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
-        roomCleared = true
-        script_execute(getTimeline,Cutscene_CH1_room2,false)
-        //roomCleared = false
+
+//player´s movement
+if(room == 4 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
+    roomCleared = true
+    script_execute(getTimeline,Cutscene_CH1_room2,false)
+    //roomCleared = false
+}
+
+
+if(room == 6 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomSuperCleared){
+    roomSuperCleared = true
+    script_execute(getTimeline,Cutscene_CH1_room5_cat,false)
+    //roomCleared = false
+}
+    
+if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
+if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
+
+if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
+    obj_warp_room01.areaUnlocked = true
+}
+if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
+    script_execute(getTimeline, FinalDemo, false)
+    caralho = true
+}
+if(room == 6 &amp;&amp; batatinhas){
+    script_execute(getTimeline,Cutscene_CH1_room5,false)
+    batatinhas = false
+}
+
+//Rooms bem feitas
+show_debug_message(flag);
+show_debug_message(cutScene);
+if(room == 0 &amp;&amp; flag){
+    script_execute(getTimeline,BeginningDungeonAcolyte,false)
+    flag = false;
+}
+
+
+if(room == 10 &amp;&amp; flag){
+    script_execute(getTimeline,Cutscene_CH2_GoblinIce,true)
+    flag = false;
+}
+
+if(timeline_running == true){
+    if (mouse_check_button_pressed(mb_left)){
+        script_execute(FastText,obj_player,10);
+        script_execute(FastText,obj_cry_girl,10);
+        script_execute(FastText,obj_enemy_goblin,10);  
     }
+}
+
+//var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
+if(cutScene == false){
+var time = get_timer()/1000000;
+dodgeTime = get_timer()/1000000;
+attackTime = get_timer()/1000000;
+specialAttackTime = get_timer()/1000000;
+
+pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
+
+if(keyboard_check(ord("S"))){    
+    keyS = true;
+    script_execute(Walking,0,pixelToMove,"down","normal");
+}else{keyS=false;}
+
+if(keyboard_check(ord("W"))){
+    keyW = true;
+    script_execute(Walking,0,-pixelToMove,"up","normal");
+}else{keyW=false;}
+
+if(keyboard_check(ord("A"))){
+    keyA=true;
+    script_execute(Walking,-pixelToMove,0,"left","normal");
+}else{keyA=false;}
+
+if(keyboard_check(ord("D"))){
+   keyD=true;
+   script_execute(Walking,pixelToMove,0,"right","normal");
+}else{keyD=false;}
+if(keyboard_check(ord("P"))){    
+    game_restart();
+
+   
     
-    if(room == 6 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomSuperCleared){
-        roomSuperCleared = true
-        script_execute(getTimeline,Cutscene_CH1_room5_cat,false)
-        //roomCleared = false
-    }
-        
-    if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-    }
-    if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-    }
     
-    if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-    }
-    if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
-        script_execute(getTimeline, FinalDemo, false)
-        caralho = true
-    }
-    if(room == 6 &amp;&amp; batatinhas){
-        script_execute(getTimeline,Cutscene_CH1_room5,false)
-        batatinhas = false
-    }
-    
-    if(cutScene == false){
-    var time = get_timer()/1000000;
-    dodgeTime = get_timer()/1000000;
-    attackTime = get_timer()/1000000;
-    specialAttackTime = get_timer()/1000000;
-    
-    pointerAng = point_direction(obj_player.x,obj_player.y,mouse_x,mouse_y); 
-    
-    //Walking
-    if(keyboard_check(ord("S"))){    
-        keyS = true;
-        script_execute(pushBlock);
-        script_execute(Walking,0,pixelToMove,"down","normal");
-    }else{keyS=false;}
-    
-    if(keyboard_check(ord("W"))){
-        keyW = true;
-        script_execute(pushBlock);
-        script_execute(Walking,0,-pixelToMove,"up","normal");
-    }else{keyW=false;}
-    
-    if(keyboard_check(ord("A"))){
-        keyA=true;
-        script_execute(pushBlock);
-        script_execute(Walking,-pixelToMove,0,"left","normal");
-    }else{keyA=false;}
-    
-    if(keyboard_check(ord("D"))){
-       keyD=true;
-       script_execute(pushBlock);
-       script_execute(Walking,pixelToMove,0,"right","normal");
-    }else{keyD=false;}
-    
-    //check if character doesnt collide with blocks while sliding
-    script_execute(checkBlocks,keyA,keyD,keyW,keyS);
-    
-    if(keyboard_check(ord("P"))){    
-        game_restart();
-    }
         
     //dodge
     if(keyboard_check(ord("Q")) &amp;&amp; dodge = true){
@@ -413,7 +440,7 @@ if(!menuOpened){
     }
     }
 }
-
+}
 
 </string>
           </argument>

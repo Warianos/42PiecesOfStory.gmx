@@ -25,7 +25,6 @@
 
 with (obj_enemy_goblin)
    {
-   state = enemy_state.stop;
    sprite_index = asset_get_index("spr_goblin_idle_down");
    }
 
@@ -33,7 +32,7 @@ with (obj_cry_girl)
    {
    sprite_index = asset_get_index("spr_cry_girl");
    image_speed = 0.3
-   var textGirl = script_execute(DrawText,"HELP MEEEEE....",0.5,x,y,150);
+   var textGirl = script_execute(DrawText,""+name+"HELP MEEEEE....",1,x,y,150,color);
    with(obj_text){
    depth = -1000;
    }
@@ -41,7 +40,7 @@ with (obj_cry_girl)
    
    
 with(obj_player){
-    
+    cutScene = true; 
     sprite_index = asset_get_index("spr_die");
     image_speed =  animationSpeed/5 * -1; 
        
@@ -76,7 +75,7 @@ with(obj_player){
             <string>
 
 with(obj_player){
-    sprite_index = asset_get_index("spr_idle_sword_down")
+    sprite_index = asset_get_index("spr_idle_walk_down")
     //sprite_index = asset_get_index("spr_die");
     //image_speed =  animationSpeed/5 * -1; 
     
@@ -109,7 +108,7 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_sword_right")
+    sprite_index = asset_get_index("spr_idle_walk_right")
     
     
     
@@ -141,7 +140,7 @@ with(obj_player){
           <argument>
             <kind>1</kind>
             <string>with(obj_player){
-    sprite_index = asset_get_index("spr_idle_sword_left")
+    sprite_index = asset_get_index("spr_idle_walk_left")
     
     
     
@@ -175,7 +174,7 @@ with(obj_player){
             <string>with(obj_cutScene_Screen){instance_destroy();}
 
 with(obj_player){
-    sprite_index = asset_get_index("spr_idle_sword_up")
+    sprite_index = asset_get_index("spr_idle_walk_up")
     
     
     
@@ -186,7 +185,7 @@ with(obj_enemy_goblin){
     sprite_index = asset_get_index("spr_goblin_idle_right")
     //var girlText = instance_place(192,256+150,obj_text);
     
-    script_execute(DrawText,"SHUT UP!",1,x,y,150);
+    script_execute(DrawText,""+name+"SHUT UP!",2,x,y,150,color);
     with(obj_text){
         depth = -1001;
     }
@@ -412,7 +411,7 @@ with(obj_enemy_goblin){
             <string>with(obj_enemy_goblin){
     sprite_index = asset_get_index("spr_goblin_idle_down")
     with(txt){instance_destroy();}
-    script_execute(DrawText,"HE SAW ME!",1,x,y,150);
+    script_execute(DrawText,""+name+"HE SAW ME!",2,x,y,150,color);
     with(txt){
         depth = -1000;
     }
@@ -452,9 +451,9 @@ with(obj_enemy_goblin){
     sprite_index = asset_get_index("spr_goblin_walk_animation_down")
     //var girlText = instance_place(192,256+150,obj_text);
     image_speed = 2;
-    vspeed = -1
+    vspeed = -2
     with(txt){instance_destroy();}  
-    script_execute(DrawText,"Mama is waiting!",1,x,y,150);
+    script_execute(DrawText,""+name+"Mama is waiting!",2,x,y,150,color);
     with(obj_text){
         depth = -1000;
     }
@@ -882,8 +881,8 @@ with(obj_player){
     
      
     
-    sprite_index = asset_get_index("spr_idle_sword_down")
-     script_execute(DrawText,"...",0.5,x,y,150);
+    sprite_index = asset_get_index("spr_idle_walk_down");
+     script_execute(DrawText,""+name+"...",1,x,y,150,color);
      with(obj_text){
         depth = -1000;
      }   

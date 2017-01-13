@@ -37,9 +37,9 @@ with (obj_cry_girl)
    
    
 with(obj_player){
-    with(obj_player){cutScene = true;}
+    
     sprite_index = asset_get_index("spr_idle_die");
-         
+       
 
 }
 
@@ -78,11 +78,13 @@ show_debug_message("entrei");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(DrawText,"....Wake up!",0.5,100,100,obj_text);
+            <string>with(obj_player){
+script_execute(DrawText,""+desc+"....Wake up!",0.5,100,100,obj_text,c_silver);
 
  with(obj_text){
    depth = -1001;
    }
+ }
 </string>
           </argument>
         </arguments>
@@ -109,11 +111,13 @@ show_debug_message("entrei");
           <argument>
             <kind>1</kind>
             <string>with(obj_text){instance_destroy();}
-script_execute(DrawText,"WAKE UP!",1,100,100,obj_text);
+with(obj_player){
+script_execute(DrawText,""+desc+"WAKE UP!",1,100,100,obj_text,c_silver);
 
  with(obj_text){
    depth = -1001;
    }
+ }
 </string>
           </argument>
         </arguments>
