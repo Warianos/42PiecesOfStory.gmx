@@ -58,6 +58,7 @@
     <instance objName="obj_collision_player" x="416" y="128" name="inst_9B9A5949" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="224" y="128" name="inst_B4A2170D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="0" y="512" name="inst_CC811757" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_player" x="512" y="96" name="inst_6EFCF6AA" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background18" x="0" y="0" w="32" h="32" xo="224" yo="32" id="10005441" name="inst_0D48114B" depth="20" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

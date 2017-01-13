@@ -35,6 +35,12 @@ state = enemy_state.stop
 invincibility = false
 enemyBeingAttacked = spr_skel_war_left_hit
 isBat = false
+name = "BadGoblin#___________#"
+
+nameGood = "GoodGobline#_____________#"
+
+color = c_red;
+txt="";
 </string>
           </argument>
         </arguments>
@@ -191,7 +197,7 @@ switch(state){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player">
+    <event eventtype="4" ename="spr_start">
       <action>
         <libid>1</libid>
         <id>603</id>

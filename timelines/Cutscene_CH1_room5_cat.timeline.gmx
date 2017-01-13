@@ -27,7 +27,7 @@ with (obj_cry_girl)
    {
    /*sprite_index = asset_get_index("spr_cry_girl");
    image_speed = 0.3;*/
-   script_execute(DrawText,"Oh, thank you sir, if u did not help m...",0.8,x,y,150);
+   script_execute(DrawText,""+name+"Oh, thank you sir, if u did not help m...",1.6,x,y,150,color);
    with(txt){depth = -1000;}
    
    }
@@ -99,7 +99,7 @@ with(obj_cat){
   
 with(obj_cry_girl){
 with(txt){instance_destroy();}
-    script_execute(DrawText,"!!!",0.8,x,y,150);
+    script_execute(DrawText,""+name+"!!!",0.8,x,y,150,color);
     with(txt){depth = -1000;}
 }
 
@@ -138,7 +138,7 @@ with(obj_cat){
   
 with(obj_cry_girl){
 with(txt){instance_destroy();}
-    script_execute(DrawText,"My cat!",0.7,x,y,150);
+    script_execute(DrawText,""+name+"My cat!",1.4,x,y,150,color);
     with(txt){depth = -1000;}
 }
 
@@ -470,7 +470,7 @@ with(obj_cry_girl){
             <kind>1</kind>
             <string>
 with(obj_player){
-    script_execute(DrawText,"..........",0.8,x,y,150);
+    script_execute(DrawText,""+name+"..........",0.8,x,y,150,color);
     with(txt){depth = -1001;}
 }
 </string>
@@ -538,7 +538,7 @@ with(obj_player){
 with(obj_player){
 
 
-    script_execute(DrawText,"It seems that you have to go after her again#well... those trunks seem really sturdy...#I will change my shape into a staff#Oh and do not forget#You can change stances whenever you want",1,x,y,150);
+    script_execute(DrawText,""+nameSword+"It seems that you have to go after her again#well... those trunks seem really sturdy...#I will change my shape into a staff#Oh and do not forget#You can change stances whenever you want",1,x,y,50,c_silver);
     with(txt){depth = -1001;}
     }
 

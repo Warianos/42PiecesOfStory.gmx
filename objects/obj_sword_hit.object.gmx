@@ -32,7 +32,6 @@
         }else{
             hp-=obj_player.swordAbilityAttack;
         }
-        
         sprite_index = enemyBeingAttacked;
         hp-=obj_player.swordAbilityAttack;
         if(hp &lt;= 0){
@@ -41,6 +40,7 @@
         }
         invincibility = true;
         alarm[0] = max_fps/2;
+        show_debug_message(string(hp))
     } 
 }
 </string>

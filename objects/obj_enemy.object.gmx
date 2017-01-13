@@ -28,12 +28,17 @@
             <string>//calculate random position to spawn the enemy, and check if it is not 
 //spawning too close to the player
 invincibility = false
-globalvar isBat
+isBat = false
+globalvar enemyBeingAttacked
+
 while(distance_to_object(obj_player) &lt; 10){
     x = irandom(room_width)
     y = irandom(room_height)
 }
-globalvar enemyBeingAttacked
+
+//variables to control enemies going against the walls
+/*wallHitted  = false
+bounceAngle = -1*/
 
 </string>
           </argument>
@@ -117,6 +122,57 @@ invincibility = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(obj_player.menuOpened == true)
+{
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_collision_neutral">
+      <action>
+        <libid>1</libid>
+        <id>115</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_bounce</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_sword_hit">
       <action>
         <libid>1</libid>
@@ -140,7 +196,7 @@ invincibility = false;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player">
+    <event eventtype="4" ename="spr_start">
       <action>
         <libid>1</libid>
         <id>603</id>

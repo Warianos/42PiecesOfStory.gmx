@@ -98,6 +98,8 @@
     <instance objName="obj_ice_block_unmovable" x="288" y="32" name="inst_02626B7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ice_block_unmovable" x="320" y="32" name="inst_0FE3B8DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ice_block_unmovable" x="352" y="32" name="inst_CD057527" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ice_wall" x="448" y="0" name="inst_1DC63751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ice_wall" x="448" y="256" name="inst_F04115F8" locked="0" code="" scaleX="1" scaleY="0.875" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background17" x="64" y="0" w="32" h="32" xo="512" yo="480" id="10004319" name="inst_168C0EB4" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
