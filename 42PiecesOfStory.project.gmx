@@ -322,13 +322,7 @@
     <script>scripts\Ability.gml</script>
     <script>scripts\MouseHouver.gml</script>
     <script>scripts\getTimeline.gml</script>
-
-
     <script>scripts\FastText.gml</script>
-
-
-    <script>scripts\FastText.gml</script>
-
     <script>scripts\MageFrostAttack.gml</script>
     <script>scripts\MageBlizzard.gml</script>
     <script>scripts\setSubMenu.gml</script>
@@ -340,7 +334,6 @@
     <script>scripts\pushBlock.gml</script>
     <script>scripts\moveBlock.gml</script>
     <script>scripts\checkBlocks.gml</script>
-
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\GrayScale.shader</shader>
@@ -361,7 +354,6 @@
       <object>objects\obj_intermedio</object>
       <object>objects\obj_final</object>
     </objects>
-    <object>objects\obj_player</object>
     <object>objects\obj_player_shield</object>
     <objects name="Interface">
       <object>objects\obj_int_stances</object>
@@ -430,42 +422,41 @@
       <object>objects\obj_heart</object>
       <object>objects\obj_wall</object>
     </objects>
-
-    <object>objects\object20</object>
-
-    <object>objects\obj_log</object>
-    <object>objects\obj_cry_girl</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_cat</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_text_new</object>
-    <object>objects\shr_Controler</object>
-
-
-
     <object>objects\obj_text_new</object>
     <object>objects\shr_Controler</object>
     <object>objects\obj_ice_wall</object>
     <object>objects\obj_cave_wall</object>
-
+    <object>objects\obj_player</object>
   </objects>
   <timelines name="timelines">
-    <timeline>timelines\Cutscene_CH2_GoblinIce</timeline>
+    <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
+    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
+    <timeline>timelines\Cutscene_CH2_GoblinThanks</timeline>
     <timeline>timelines\Cutscene_CH2_SwordTalk</timeline>
     <timeline>timelines\Cutscene_CH2_wakeUp</timeline>
+    <timeline>timelines\FinalDemo</timeline>
+    <timeline>timelines\timeline3</timeline>
+    <timeline>timelines\timeline4</timeline>
+    <timeline>timelines\</timeline>
+    <timeline>timelines\BeginningDungeonAcolyte</timeline>
+    <timeline>timelines\Cut</timeline>
     <timeline>timelines\Cutscene_Ch1_Beginning</timeline>
     <timeline>timelines\Cutscene_CH1_room2</timeline>
     <timeline>timelines\Cutscene_CH1_room5</timeline>
-    <timeline>timelines\Cutscene_CH1_room5_cat</timeline>
-    <timeline>timelines\Cutscene_CH1_Sleep</timeline>
-    <timeline>timelines\FinalDemo</timeline>
-    <timeline>timelines\Cutscene_CH2_GoblinThanks</timeline>
-    <timeline>timelines\BeginningDungeonAcolyte</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_6</room>
-    <room>rooms\main_menu</room>
+    <room>rooms\room_10</room>
+    <room>rooms\room_11</room>
+    <room>rooms\room_12</room>
+    <room>rooms\room_MageFinal</room>
+    <room>rooms\room_MageShields</room>
+    <room>rooms\room_MageWolves</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
+    <room>rooms\room2</room>
+    <room>rooms\room16</room>
+    <room>rooms\main_menu</room>
     <room>rooms\rm_game_over</room>
     <room>rooms\room_1</room>
     <room>rooms\room_2</room>
@@ -475,12 +466,6 @@
     <room>rooms\room_7</room>
     <room>rooms\room_8</room>
     <room>rooms\room_9</room>
-    <room>rooms\room_10</room>
-    <room>rooms\room_11</room>
-    <room>rooms\room_12</room>
-    <room>rooms\room_MageWolves</room>
-    <room>rooms\room_MageShields</room>
-    <room>rooms\room_MageFinal</room>
   </rooms>
   <constants number="8">
     <constant name="enemy_spider_y_inc">150</constant>

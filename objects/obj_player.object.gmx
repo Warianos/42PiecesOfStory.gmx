@@ -25,8 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-
-
             <string>color = c_blue;
 name = "Cagatacos#___________#";
 nameSword = "SacaRolhas#____________#";
@@ -36,9 +34,9 @@ txt="";
 //global variable 
 roomCleared = false
 
-            <string>//global variable 
+            //global variable 
 
-            <string>name = "Cagatacos#___________#"
+            name = "Cagatacos#___________#"
 nameSword = "Cometacos#___________#"
 desc = "????#______#"
 color = c_green;
@@ -177,7 +175,7 @@ pointsToAdd = 2
         <arguments>
           <argument>
             <kind>14</kind>
-            <timeline>BeginningDungeonAcolyte</timeline>
+            <timeline>-100</timeline>
           </argument>
           <argument>
             <kind>0</kind>
@@ -209,7 +207,7 @@ pointsToAdd = 2
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>dark</sound>
+            <sound>-100</sound>
           </argument>
         </arguments>
       </action>
@@ -311,53 +309,6 @@ if(!menuOpened){
 
 //player´s movement
 
-if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
-
-if(room == 4 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
-
-    roomCleared = true
-    script_execute(getTimeline,Cutscene_CH1_room2,false)
-    //roomCleared = false
-}
-
-
-if(room == 6 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomSuperCleared){
-    roomSuperCleared = true
-    script_execute(getTimeline,Cutscene_CH1_room5_cat,false)
-    //roomCleared = false
-}
-
-    
-if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
-    obj_warp_room01.areaUnlocked = true
-}
-if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
-    obj_warp_room01.areaUnlocked = true
-}
-
-if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
-    obj_warp_room01.areaUnlocked = true
-}
-if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
-    script_execute(getTimeline, FinalDemo, false)
-    caralho = true
-}
-if(room == 6 &amp;&amp; batatinhas){
-    script_execute(getTimeline,Cutscene_CH1_room5,false)
-    batatinhas = false
-}
-
-if(timeline_running == true){
-    if (mouse_check_button_pressed(mb_left)){
-        script_execute(FastText,obj_player,10);
-        script_execute(FastText,obj_cry_girl,10);
-        script_execute(FastText,obj_enemy_goblin,10);
-    
-    }
-
-
-
-}
 
 //var img = asset_get_index("spr_walk_animation_" + string(playerDirection));
 if(cutScene == false){
@@ -389,6 +340,7 @@ if(keyboard_check(ord("D"))){
 }else{keyD=false;}
 if(keyboard_check(ord("P"))){    
     game_restart();
+}
 
     //player´s movement
     if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
@@ -544,8 +496,7 @@ if(keyboard_check(ord("P"))){
     }
     }
 }
-}
-
+}}
 </string>
           </argument>
         </arguments>
