@@ -25,13 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global variable 
-roomCleared      = false
+            <string>name = "Cagatacos#___________#"
+nameSword = "Cometacos#___________#"
+desc = "????#______#"
+color = c_green;
+txt="";
 
+//global variable 
+roomCleared      = false
 roomSuperCleared = false
-batatinhas = true
+batatinhas = true;
+flag = true;
 caralho = false
 menuOpened = false
+
 //Change stance time variables
 changeWepCooldownIni = 0;
 changeWepCooldownFin = 0;
@@ -155,7 +162,7 @@ pointsToAdd = 2
         <arguments>
           <argument>
             <kind>14</kind>
-            <timeline>Cutscene_CH1_Sleep</timeline>
+            <timeline>Cutscene_CH2_wakeUp</timeline>
           </argument>
           <argument>
             <kind>0</kind>
@@ -288,7 +295,7 @@ if(!menuOpened){
 
 
 //player´s movement
-if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
+if(room == 4 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
     roomCleared = true
     script_execute(getTimeline,Cutscene_CH1_room2,false)
     //roomCleared = false
@@ -318,6 +325,13 @@ if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
 if(room == 6 &amp;&amp; batatinhas){
     script_execute(getTimeline,Cutscene_CH1_room5,false)
     batatinhas = false
+}
+
+//Rooms bem feitas
+show_debug_message(room);
+if(room == 8 &amp;&amp; flag){
+    script_execute(getTimeline,Cutscene_CH2_wakeUp,false)
+    flag = false;
 }
 
 if(timeline_running == true){
@@ -359,38 +373,7 @@ if(keyboard_check(ord("D"))){
 if(keyboard_check(ord("P"))){    
     game_restart();
 
-    //player´s movement
-    if(room == 3 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomCleared){
-        roomCleared = true
-        script_execute(getTimeline,Cutscene_CH1_room2,false)
-        //roomCleared = false
-    }
-    
-    if(room == 6 &amp;&amp; !instance_exists(obj_enemy) &amp;&amp; !roomSuperCleared){
-        roomSuperCleared = true
-        script_execute(getTimeline,Cutscene_CH1_room5_cat,false)
-        //roomCleared = false
-    }
-        
-    if(room == 7 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-    }
-    if(room == 8 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-
-    }
-    
-    if(room == 6 &amp;&amp; !instance_exists(obj_enemy)){
-        obj_warp_room01.areaUnlocked = true
-    }
-    if(room == 6 &amp;&amp; !instance_exists(obj_log) &amp;&amp; !caralho){
-        script_execute(getTimeline, FinalDemo, false)
-        caralho = true
-    }
-    if(room == 6 &amp;&amp; batatinhas){
-        script_execute(getTimeline,Cutscene_CH1_room5,false)
-        batatinhas = false
-    }
+   
     
     
         

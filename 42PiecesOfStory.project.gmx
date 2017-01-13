@@ -404,12 +404,6 @@
       <object>objects\obj_heart</object>
       <object>objects\obj_wall</object>
     </objects>
-    <object>objects\object20</object>
-    <object>objects\obj_log</object>
-    <object>objects\obj_cry_girl</object>
-    <object>objects\obj_fire</object>
-    <object>objects\obj_cat</object>
-    <object>objects\obj_wall</object>
     <object>objects\obj_text_new</object>
     <object>objects\shr_Controler</object>
   </objects>
@@ -442,6 +436,16 @@
     <room>rooms\room_12</room>
     <room>rooms\room_MageWolves</room>
   </rooms>
+  <constants number="8">
+    <constant name="enemy_spider_y_inc">150</constant>
+    <constant name="enemy_spider_x_inc">200</constant>
+    <constant name="max_fps">30</constant>
+    <constant name="enemy_hp_spider">2</constant>
+    <constant name="enemy_hp_wolf">5</constant>
+    <constant name="enemy_speed_default">2</constant>
+    <constant name="player_hp_default">10</constant>
+    <constant name="enemy_hp_skeleton_archer">3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

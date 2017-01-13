@@ -51,15 +51,12 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_wall" x="472" y="96" name="inst_AC52BC67" locked="0" code="" scaleX="1" scaleY="0.376470595598221" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="0" y="160" name="inst_687D554D" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="32" y="160" name="inst_A081CB40" locked="0" code="" scaleX="1" scaleY="7" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="64" y="352" name="inst_44695667" locked="0" code="" scaleX="14.4516124725342" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_neutral" x="0" y="32" name="inst_BD7D1F08" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="64" y="160" name="inst_33AD793C" locked="0" code="" scaleX="1" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_player" x="53" y="169" name="inst_0A96D2FB" locked="0" code="" scaleX="1" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="475" y="192" name="inst_E2429F37" locked="0" code="" scaleX="1" scaleY="0.25" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="473" y="256" name="inst_C955E4F4" locked="0" code="" scaleX="1" scaleY="0.375" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background16" x="0" y="64" w="32" h="32" xo="96" yo="192" id="10003078" name="inst_AC621D54" depth="5" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
