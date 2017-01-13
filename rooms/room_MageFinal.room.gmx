@@ -51,7 +51,32 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+<<<<<<< HEAD
     <instance objName="obj_collision_neutral" x="32" y="64" name="inst_A5B5A3D1" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+=======
+    <instance objName="obj_enemy_mage" x="416" y="288" name="inst_90F5FB89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="160" name="inst_9D929D25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="128" name="inst_D929292D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="96" name="inst_80EB1B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="64" name="inst_0A385278" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="32" name="inst_F38CDEE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="0" name="inst_F6843573" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="32" y="0" name="inst_1F005E27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="64" y="0" name="inst_E3499236" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="576" y="0" name="inst_6A43C88A" locked="0" code="" scaleX="1" scaleY="16" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="544" y="480" name="inst_30543900" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="512" y="480" name="inst_2C2C1A29" locked="0" code="" scaleX="-11" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="512" y="480" name="inst_5D84C562" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="128" y="480" name="inst_96E7E5C4" locked="0" code="" scaleX="-4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="128" y="480" name="inst_6395D32B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision_neutral" x="0" y="192" name="inst_A75594CE" locked="0" code="" scaleX="1" scaleY="9" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="128" y="288" name="inst_6BCAB2F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pillar" x="128" y="128" name="inst_AF0CC524" locked="0" code="" scaleX="1.39999997615814" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pillar" x="448" y="320" name="inst_6E1CD9A3" locked="0" code="" scaleX="1.39999997615814" scaleY="1" colour="4294967295" rotation="0"/>
+  </instances>
+  <tiles/>
+    <instance objName="obj_collision_neutral" x="64" y="64" name="inst_A5B5A3D1" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
+>>>>>>> origin/master
     <instance objName="obj_collision_neutral" x="224" y="96" name="inst_B4E68FC4" locked="0" code="" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_neutral" x="384" y="64" name="inst_20D4A127" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision_neutral" x="576" y="64" name="inst_DB3E6E46" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
